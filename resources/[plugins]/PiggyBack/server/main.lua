@@ -1,0 +1,21 @@
+RegisterServerEvent('::{ayzwen}::cmg2_animations:sync')
+AddEventHandler('::{ayzwen}::cmg2_animations:sync', function(animationLib, animation, animation2, distans, distans2, height, targetSrc, length, spin, controlFlagSrc, controlFlagTarget, animFlagTarget)
+	TriggerClientEvent('::{ayzwen}::cmg2_animations:syncTarget', targetSrc, source, animationLib, animation2, distans, distans2, height, length, spin, controlFlagTarget, animFlagTarget)
+	TriggerClientEvent('::{ayzwen}::cmg2_animations:syncMe', source, animationLib, animation, length, controlFlagSrc, animFlagTarget)
+end)
+
+RegisterServerEvent('::{ayzwen}::cmg2_animations:stop')
+AddEventHandler('::{ayzwen}::cmg2_animations:stop', function(targetSrc)
+	TriggerClientEvent('::{ayzwen}::cmg2_animations:cl_stop', targetSrc)
+end)
+
+RegisterServerEvent('::{ayzwen}::cmg3_animations:sync')
+AddEventHandler('::{ayzwen}::cmg3_animations:sync', function(animationLib, animationLib2, animation, animation2, distans, distans2, height, targetSrc, length, spin, controlFlagSrc, controlFlagTarget, animFlagTarget, attachFlag)
+	TriggerClientEvent('::{ayzwen}::cmg3_animations:syncTarget', targetSrc, source, animationLib2, animation2, distans, distans2, height, length, spin, controlFlagTarget, animFlagTarget, attachFlag)
+	TriggerClientEvent('::{ayzwen}::cmg3_animations:syncMe', source, animationLib, animation, length, controlFlagSrc, animFlagTarget)
+end)
+
+RegisterServerEvent('::{ayzwen}::cmg3_animations:stop')
+AddEventHandler('::{ayzwen}::cmg3_animations:stop', function(targetSrc)
+	TriggerClientEvent('::{ayzwen}::cmg3_animations:cl_stop', targetSrc)
+end)

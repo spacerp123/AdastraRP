@@ -1,0 +1,16 @@
+TriggerEvent('::{ayzwen}::esx:getSharedObject', function(obj) ESX = obj end)
+
+ESX.RegisterUsableItem('piluleoubli', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	TriggerClientEvent('::{ayzwen}::dix-oblivionpill:piluleoubli', xPlayer.source)
+	xPlayer.removeInventoryItem('piluleoubli', 1)
+	TriggerClientEvent('::{ayzwen}::esx:showNotification', xPlayer.source, _U('oblivionpill_used'))
+	Citizen.Wait(60000)
+	TriggerClientEvent('::{ayzwen}::dix-oblivionpill:stoppill', xPlayer.source)
+end)
+
+ESX.RegisterUsableItem('oxygen_mask', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	TriggerClientEvent('::{ayzwen}::dix-oblivionpill:oxygen_mask', xPlayer.source)
+	xPlayer.removeInventoryItem('oxygen_mask', 1)
+end)
