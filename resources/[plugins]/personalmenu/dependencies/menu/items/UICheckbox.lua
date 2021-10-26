@@ -5,12 +5,12 @@ local SettingsButton = {
 	LeftBadge = { Y = -2, Width = 40, Height = 40 },
 	RightBadge = { X = 385, Y = -2, Width = 40, Height = 40 },
 	RightText = { X = 420, Y = 4, Scale = 0.35 },
-	SelectedSprite = { Dictionary = "painauchocola", Texture = "gradient_nav", Y = 0, Width = 431, Height = 38 },
+	SelectedSprite = { Dictionary = "commonmenu", Texture = "gradient_nav", Y = 0, Width = 431, Height = 38 },
 }
 
 ---@type table
 local SettingsCheckbox = {
-	Dictionary = "painauchocola",
+	Dictionary = "commonmenu",
 	Textures = {
 		"shop_box_blankb", -- 1
 		"shop_box_tickb", -- 2

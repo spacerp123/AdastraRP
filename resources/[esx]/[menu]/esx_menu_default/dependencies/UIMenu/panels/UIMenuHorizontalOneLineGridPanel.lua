@@ -20,7 +20,7 @@ function UIMenuHorizontalOneLineGridPanel.New(LeftText, RightText, CirclePositio
         Data = {
             Enabled = true,
         },
-        Background = Sprite.New("painauchocola", "gradient_bgd", 0, 0, 431, 275),
+        Background = Sprite.New("commonmenu", "gradient_bgd", 0, 0, 431, 275),
         Grid = Sprite.New("NativeUI", "horizontal_grid", 0, 0, 200, 200, 0, 255, 255, 255, 255),
         Circle = Sprite.New("mpinventory", "in_world_circle", 0, 0, 20, 20, 0),
         Audio = { Slider = "CONTINUOUS_SLIDER", Library = "HUD_FRONTEND_DEFAULT_SOUNDSET", Id = nil },

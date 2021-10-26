@@ -371,6 +371,7 @@ WsT.BlacklistedModels = { -- Blacklisted models ( PEDS / VEHICLES ) ( MODEL HASH
     'tampa3',
     'halftrack',
     'nokota',
+	'kosa',
     'strikeforce',
     'bombushka',
     'molotok',

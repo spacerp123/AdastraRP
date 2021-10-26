@@ -198,15 +198,13 @@ Config.AuthorizedVehicles = {
 		{ model = 'policeb', label = 'Moto de Police'},
 		{ model = 'code3fpis', label = 'Ford Fpis'},
 		{ model = 'riot', label = 'R.I.O.T'},
-		{ model = 'intcept4', label = 'Vehicule Banalisé'},
 		{ model = 'code320exp', label = 'Ford Explorer'},
 		{ model = 'code318charg', label = 'Dodge Charger'},
 		{ model = 'fbi', label = 'FBI Buffalo'},
 		{ model = 'code318tahoe', label = 'Ford Tahoe'},
 		{ model = 'code3ram', label = 'Ford Ram'},
 		{ model = 'ghispo2', label = 'Maserati'},
-		{ model = 'code398cvpi', label = 'Ford CVPI'},
-		{ model = 'intcept', label = 'Interceptor'}
+		{ model = 'code398cvpi', label = 'Ford CVPI'}
 	}
 }
 

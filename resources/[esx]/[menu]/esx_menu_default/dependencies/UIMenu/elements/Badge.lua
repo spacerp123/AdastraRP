@@ -165,9 +165,9 @@ BadgeTexture = {
 BadgeDictionary = {
     [0] = function(Selected)
         if Selected then
-            return "painauchocola"
+            return "commonmenu"
         else
-            return "painauchocola"
+            return "commonmenu"
         end
     end,
     [1] = function(Selected)
@@ -224,7 +224,7 @@ function GetBadgeDictionary(Badge, Selected)
     if BadgeDictionary[Badge] then
         return BadgeDictionary[Badge](Selected)
     else
-        return "painauchocola"
+        return "commonmenu"
     end
 end
 

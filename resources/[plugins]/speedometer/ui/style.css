@@ -89,15 +89,15 @@ body {
       -webkit-animation: fadeLoop 1s step-start infinite !important;
       animation: fadeLoop 1s step-start infinite !important; }
       .huds .hud.dashboard .clignotant.active svg path {
-        stroke: #f39c12 !important; }
+        stroke: #C31717 !important; }
     .huds .hud.dashboard .feu-position.active svg {
       opacity: 1; }
       .huds .hud.dashboard .feu-position.active svg path {
-        fill: #cc2e2e; }
+        fill: #C31717; }
     .huds .hud.dashboard .feu-route.active svg {
       opacity: 1; }
       .huds .hud.dashboard .feu-route.active svg path {
-        fill: #0984e3; }
+        fill: #C31717; }
     .huds .hud.dashboard .speedometer {
       width: 100px;
       height: 100px;

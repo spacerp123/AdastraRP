@@ -37,9 +37,9 @@ function UIMenu.New(Title, Subtitle, X, Y, TxtDictionary, TxtName, Heading, R, G
 		Subtitle = ""
 	end
 	if TxtDictionary ~= nil then
-		TxtDictionary = tostring(TxtDictionary) or "painauchocola"
+		TxtDictionary = tostring(TxtDictionary) or "commonmenu"
 	else
-		TxtDictionary = "painauchocola"
+		TxtDictionary = "commonmenu"
 	end
 	if TxtName ~= nil then
 		TxtName = tostring(TxtName) or "interaction_bgd"
@@ -223,15 +223,15 @@ function UIMenu.New(Title, Subtitle, X, Y, TxtDictionary, TxtName, Heading, R, G
 		_UIMenu.Subtitle.ExtraY = 37
 	end
 
-	_UIMenu.ArrowSprite = Sprite.New("painauchocola", "shop_arrows_upanddown", 190 + _UIMenu.Position.X, 147 + 37 * (_UIMenu.Pagination.Total + 1) + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 40, 40)
+	_UIMenu.ArrowSprite = Sprite.New("commonmenu", "shop_arrows_upanddown", 190 + _UIMenu.Position.X, 147 + 37 * (_UIMenu.Pagination.Total + 1) + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 40, 40)
 	_UIMenu.Extra.Up = UIResRectangle.New(0 + _UIMenu.Position.X, 144 + 38 * (_UIMenu.Pagination.Total + 1) + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 431, 18, 0, 0, 0, 200)
 	_UIMenu.Extra.Down = UIResRectangle.New(0 + _UIMenu.Position.X, 144 + 18 + 38 * (_UIMenu.Pagination.Total + 1) + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 431, 18, 0, 0, 0, 200)
 
 	_UIMenu.Description.Bar = UIResRectangle.New(_UIMenu.Position.X, 123, 431, 4, 0, 0, 0, 255)
-	_UIMenu.Description.Rectangle = Sprite.New("painauchocola", "gradient_bgd", _UIMenu.Position.X, 127, 431, 30)
+	_UIMenu.Description.Rectangle = Sprite.New("commonmenu", "gradient_bgd", _UIMenu.Position.X, 127, 431, 30)
 	_UIMenu.Description.Text = UIResText.New("Description", _UIMenu.Position.X + 5, 125, 0.35)
 
-	_UIMenu.Background = Sprite.New("painauchocola", "gradient_bgd", _UIMenu.Position.X, 144 + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 290, 25)
+	_UIMenu.Background = Sprite.New("commonmenu", "gradient_bgd", _UIMenu.Position.X, 144 + _UIMenu.Position.Y - 37 + _UIMenu.Subtitle.ExtraY, 290, 25)
 
 	Citizen.CreateThread(function()
 		if not HasScaleformMovieLoaded(_UIMenu.InstructionalScaleform) then

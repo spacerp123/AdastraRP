@@ -155,9 +155,9 @@ RageUI.BadgeTexture = {
 RageUI.BadgeDictionary = {
 	[1] = function(Selected)
 		if Selected then
-			return "painauchocola"
+			return "commonmenu"
 		else
-			return "painauchocola"
+			return "commonmenu"
 		end
 	end
 }
@@ -208,7 +208,7 @@ function RageUI.GetBadgeDictionary(Badge, Selected)
 	if RageUI.BadgeDictionary[Badge] then
 		return RageUI.BadgeDictionary[Badge](Selected)
 	else
-		return "painauchocola"
+		return "commonmenu"
 	end
 end
 

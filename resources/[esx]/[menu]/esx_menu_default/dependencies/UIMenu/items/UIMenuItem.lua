@@ -27,9 +27,9 @@ function UIMenuItem.New(Text, Description)
             }
         },
         _Description = tostring(Description) or "";
-        SelectedSprite = Sprite.New("painauchocola", "gradient_nav", 0, 0, 431, 38),
-        LeftBadge = { Sprite = Sprite.New("painauchocola", "", 0, 0, 40, 40), Badge = 0 },
-        RightBadge = { Sprite = Sprite.New("painauchocola", "", 0, 0, 40, 40), Badge = 0 },
+        SelectedSprite = Sprite.New("commonmenu", "gradient_nav", 0, 0, 431, 38),
+        LeftBadge = { Sprite = Sprite.New("commonmenu", "", 0, 0, 40, 40), Badge = 0 },
+        RightBadge = { Sprite = Sprite.New("commonmenu", "", 0, 0, 40, 40), Badge = 0 },
         Label = {
             Text = UIResText.New("", 0, 0, 0.35, 245, 245, 245, 255, 0, "Right"),
             MainColour = { R = 255, G = 255, B = 255, A = 255 },

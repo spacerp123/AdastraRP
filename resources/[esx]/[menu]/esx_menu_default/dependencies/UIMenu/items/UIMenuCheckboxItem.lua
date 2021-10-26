@@ -26,7 +26,7 @@ function UIMenuCheckboxItem.New(Text, Check, Description, CheckboxStyle)
     local _UIMenuCheckboxItem = {
         Base = UIMenuItem.New(Text or "", Description or ""),
         CheckboxStyle = CheckboxStyle,
-        CheckedSprite = Sprite.New("painauchocola", "shop_box_blank", 410, 95, 50, 50),
+        CheckedSprite = Sprite.New("commonmenu", "shop_box_blank", 410, 95, 50, 50),
         Checked = tobool(Check),
         CheckboxEvent = function(menu, item, checked)
         end,

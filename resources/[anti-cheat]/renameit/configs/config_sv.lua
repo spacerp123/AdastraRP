@@ -5,11 +5,11 @@ WsS = {}
 WsS.Version = "v2.34" -- DONT TOUCH THIS
 
 -- ## SERVER CONFIG ## --
-WsS.ModelsLogWebhook = "https://discord.com/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
-WsS.ExplosionLogWebhook = "https://discord.com/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
-WsS.LogBanWebhook = "https://discord.com/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
-WsS.AntiVPNWebhook = "https://discord.com/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
-WsS.ServerName = "MoonLite" --YOUR SERVER NAME
+WsS.ModelsLogWebhook = "https://discord.comm/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
+WsS.ExplosionLogWebhook = "https://discord.comm/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
+WsS.LogBanWebhook = "https://discord.comm/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
+WsS.AntiVPNWebhook = "https://discord.comm/api/webhooks/839579261043081217/0nNu55RvXqGcJN-5SLAK3TW9oULaywk1XOJBa4wqWrMACYE_6P6wwcqJKsRNAbnTsPAY"
+WsS.ServerName = "Adastra" --YOUR SERVER NAME
 WsS.License = "waveshieldzddfg8n12omjvsa6i65a19mcreiulsgyp" -- YOUR LICENSE KEY ( KEEP IT SECRET )
 
 -- ## BAN SYSTEM ## --
@@ -20,16 +20,16 @@ WsS.EnableBanSystem = true -- ENABLE / DISABLE BAN SYSTEM
     WsS.UseScreenShotSystem = false -- ENABLE / DISABLE SCREENSHOT SYSTEM
     WsS.AntiBanEvade = true -- ENABLE / DISABLE ANTI BAN EVADE, ( IT BAN THE PLAYER COMPUTER )
     WsS.CustomBanMessage = true -- ENABLE / DISABLE CUSTOM BAN MESSAGE
-        WsS.BanMessage = "MoonLite AC ta ban, discord.gg/moonlite si erreur." -- YOUR BAN MESSAGE
+        WsS.BanMessage = "Adastra AC ta ban, discord.gg/Adastrarp si erreur." -- YOUR BAN MESSAGE
 WsS.ShowIPAddress = true -- SHOW IP ADDRESS ON DISCORD LOGS
 WsS.BanIPAddress = true -- BAN IP ADDRESS ? 
-WsS.ForceDiscord = false -- IS DISCORD REQUIRED TO PLAY ON YOUR SERVER ?
+WsS.ForceDiscord = true -- IS DISCORD REQUIRED TO PLAY ON YOUR SERVER ?
 WsS.UnauthorizedNames = false -- IF YOU WANT BLACKLIST SOMES NAMES ON YOUR SERVER
-WsS.AllowFromCountry = false -- ENABLE WHITELIST OF COUNTRY THAT CAN CONNECT TO YOUR SERVER CF WsS.AllowedCountrys
+WsS.AllowFromCountry = true -- ENABLE WHITELIST OF COUNTRY THAT CAN CONNECT TO YOUR SERVER CF WsS.AllowedCountrys
 
 -- ## ANTI VPN ## --
-WsS.AntiVPN = false -- ENABLE/DISABLE ANTI VPN
-WsS.AntiVPNDiscordLogs = false -- ENABLE/DISABLE ANTI VPN LOGS
+WsS.AntiVPN = true -- ENABLE/DISABLE ANTI VPN
+WsS.AntiVPNDiscordLogs = true -- ENABLE/DISABLE ANTI VPN LOGS
 
 -- ## BLACKLISTED SUFF ## --
 WsS.BlacklistedTriggersDetections = true --DETECT IF A PLAYER TRIGGER A BLACKLISTED EVENT

@@ -58,7 +58,7 @@ RegisterCommand('annoncejob', function(source, args, rawCommand)
         local msg = table.concat(args, " ")
         local args = msg
         TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', -1, jobLabel, '~b~Accueil', msg, CHAR, 0)
-        PerformHttpRequest('https://discord.com/api/webhooks/843451458875555870/5ca3io19aNzNx2VDoyLRFMbudOe6wVOJiB9GcM2bf8UKwBEIl7r7y2TDTiCpL_7b1y9L', function(err, text, headers) end, 'POST', json.encode({username = jobLabel.." - Adastra", content = "```ID : " .. source .. "\nJoueur : " .. GetPlayerName(source) .. "\nMessage : " .. msg .. "```"}), { ['Content-Type'] = 'application/json' })  
+        PerformHttpRequest('https://discord.comm/api/webhooks/843451458875555870/5ca3io19aNzNx2VDoyLRFMbudOe6wVOJiB9GcM2bf8UKwBEIl7r7y2TDTiCpL_7b1y9L', function(err, text, headers) end, 'POST', json.encode({username = jobLabel.." - Adastra", content = "```ID : " .. source .. "\nJoueur : " .. GetPlayerName(source) .. "\nMessage : " .. msg .. "```"}), { ['Content-Type'] = 'application/json' })  
     else
         TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Avertisement', '~r~ALERTE' , 'Tu n’as pas de métier pour faire une annonce', CHAR, 0)
     end

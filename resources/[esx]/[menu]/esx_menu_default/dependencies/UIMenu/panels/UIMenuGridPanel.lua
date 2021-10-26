@@ -22,7 +22,7 @@ function UIMenuGridPanel.New(TopText, LeftText, RightText, BottomText, CirclePos
         Data = {
             Enabled = true,
         },
-        Background = Sprite.New("painauchocola", "gradient_bgd", 0, 0, 431, 275),
+        Background = Sprite.New("commonmenu", "gradient_bgd", 0, 0, 431, 275),
         Grid = Sprite.New("pause_menu_pages_char_mom_dad", "nose_grid", 0, 0, 200, 200, 0, 255, 255, 255, 255),
         Circle = Sprite.New("mpinventory", "in_world_circle", 0, 0, 20, 20, 0),
         Audio = { Slider = "CONTINUOUS_SLIDER", Library = "HUD_FRONTEND_DEFAULT_SOUNDSET", Id = nil },

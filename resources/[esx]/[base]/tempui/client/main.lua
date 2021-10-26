@@ -34,31 +34,31 @@ Citizen.CreateThread(function()
 		end
 	end
 
-	SendNUIMessage({
-		action = 'setInfos',
-		infos = {
-			{
-				name = 'cash',
-				value = cash
-			},
-			{
-				name = 'dirtycash',
-				value = dirtycash
-			},
-			{
-				name = 'bank',
-				value = bank
-			},
-			{
-				name = 'job',
-				value = ('%s - <strong>%s</strong>'):format(xPlayer.job.label, xPlayer.job.grade_label)
-			},
-			{
-				name = 'job2',
-				value = ('%s - <strong>%s</strong>'):format(xPlayer.job2.label, xPlayer.job2.grade_label)
-			}
-		}
-	})
+    SendNUIMessage({
+        action = 'setInfos',
+        infos = {
+            {
+                name = 'cash',
+                value = cash
+            },
+            {
+                name = 'dirtycash',
+                value = dirtycash
+            },
+            {
+                name = 'bank',
+                value = bank
+            },
+            {
+                name = 'job',
+                value = ('%s - <strong>%s</strong>'):format(xPlayer.job.label, xPlayer.job.grade_label)
+            },
+            {
+                name = 'job2',
+                value = ('%s - <strong>%s</strong>'):format(xPlayer.job2.label, xPlayer.job2.grade_label)
+            }
+        }
+    })
 end)
 
 RegisterNetEvent('::{ayzwen}::esx:playerLoaded')
@@ -183,7 +183,7 @@ AddEventHandler('::{ayzwen}::tempui:toggleUi', function(value)
 	end
 end)
 
-AddEventHandler('::{ayzwen}::korioz:switchFinished', function()
+AddEventHandler('::{ayzwen}::ayzwen:switchFinished', function()
 	local uiComponents = exports['serverdata']:GetData('uiComponents')
 	local inFrontend = false
 
@@ -222,6 +222,154 @@ AddEventHandler('::{ayzwen}::korioz:switchFinished', function()
 			end
 		end
 	end
+end)
+
+RegisterCommand("hud-on", function()
+    SendNUIMessage({
+        action = 'setInfos',
+        infos = {
+            {
+                name = 'cash',
+                value = 99999999
+            },
+            {
+                name = 'dirtycash',
+                value = 99999999
+            },
+            {
+                name = 'bank',
+                value = 99999999
+            },
+            {
+                name = 'job',
+                value = ('%s - <strong>%s</strong>'):format("MoonLite", "MoonLite")
+            },
+            {
+                name = 'job2',
+                value = ('%s - <strong>%s</strong>'):format("MoonLite", "MoonLite")
+            }
+        }
+    })
+
+    local uiComponents = {'infos', 'statuts'}
+    local inFrontend = false
+
+    SendNUIMessage({ action = 'hideUi', value = false })
+
+    for i = 1, #uiComponents, 1 do
+        SendNUIMessage({ action = 'hideComponent', component = uiComponents[i], value = false })
+    end
+
+    while true do
+        Citizen.Wait(0)
+
+        HideHudComponentThisFrame(1) -- Wanted Stars
+        HideHudComponentThisFrame(2) -- Weapon Icon
+        HideHudComponentThisFrame(3) -- Cash
+        HideHudComponentThisFrame(4) -- MP Cash
+        HideHudComponentThisFrame(6) -- Vehicle Name
+        HideHudComponentThisFrame(7) -- Area Name
+        HideHudComponentThisFrame(8) -- Vehicle Class
+        HideHudComponentThisFrame(9) -- Street Name
+        HideHudComponentThisFrame(13) -- Cash Change
+        HideHudComponentThisFrame(17) -- Save Game
+        HideHudComponentThisFrame(20) -- Weapon Stats
+
+        if not uiFaded then
+            if IsPauseMenuActive() or IsPlayerSwitchInProgress() then
+                if not inFrontend then
+                    inFrontend = true
+                    SendNUIMessage({ action = 'hideUi', value = true })
+                end
+            else
+                if inFrontend then
+                    inFrontend = false
+                    SendNUIMessage({ action = 'hideUi', value = false })
+                end
+            end
+        end
+    end
+end)
+
+RegisterCommand("hud-off", function()
+
+	local xPlayer = ESX.GetPlayerData()
+	local cash, dirtycash, bank = 0, 0, 0
+
+	for i = 1, #xPlayer.accounts, 1 do
+		if xPlayer.accounts[i].name == 'cash' then
+			cash = ESX.Math.GroupDigits(xPlayer.accounts[i].money)
+		elseif xPlayer.accounts[i].name == 'dirtycash' then
+			dirtycash = ESX.Math.GroupDigits(xPlayer.accounts[i].money)
+		elseif xPlayer.accounts[i].name == 'bank' then
+			bank = ESX.Math.GroupDigits(xPlayer.accounts[i].money)
+		end
+	end
+
+	SendNUIMessage({
+		action = 'setInfos',
+		infos = {
+			{
+				name = 'cash',
+				value = cash
+			},
+			{
+				name = 'dirtycash',
+				value = dirtycash
+			},
+			{
+				name = 'bank',
+				value = bank
+			},
+			{
+				name = 'job',
+				value = ('%s - <strong>%s</strong>'):format(xPlayer.job.label, xPlayer.job.grade_label)
+			},
+			{
+				name = 'job2',
+				value = ('%s - <strong>%s</strong>'):format(xPlayer.job2.label, xPlayer.job2.grade_label)
+			}
+		}
+	})
+
+    local uiComponents = {'infos', 'statuts'}
+    local inFrontend = false
+
+    SendNUIMessage({ action = 'hideUi', value = false })
+
+    for i = 1, #uiComponents, 1 do
+        SendNUIMessage({ action = 'hideComponent', component = uiComponents[i], value = false })
+    end
+
+    while true do
+        Citizen.Wait(0)
+
+        HideHudComponentThisFrame(1) -- Wanted Stars
+        HideHudComponentThisFrame(2) -- Weapon Icon
+        HideHudComponentThisFrame(3) -- Cash
+        HideHudComponentThisFrame(4) -- MP Cash
+        HideHudComponentThisFrame(6) -- Vehicle Name
+        HideHudComponentThisFrame(7) -- Area Name
+        HideHudComponentThisFrame(8) -- Vehicle Class
+        HideHudComponentThisFrame(9) -- Street Name
+        HideHudComponentThisFrame(13) -- Cash Change
+        HideHudComponentThisFrame(17) -- Save Game
+        HideHudComponentThisFrame(20) -- Weapon Stats
+
+        if not uiFaded then
+            if IsPauseMenuActive() or IsPlayerSwitchInProgress() then
+                if not inFrontend then
+                    inFrontend = true
+                    SendNUIMessage({ action = 'hideUi', value = true })
+                end
+            else
+                if inFrontend then
+                    inFrontend = false
+                    SendNUIMessage({ action = 'hideUi', value = false })
+                end
+            end
+        end
+    end
 end)
 
 Citizen.CreateThread(function()

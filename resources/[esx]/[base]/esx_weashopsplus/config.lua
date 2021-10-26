@@ -7,7 +7,7 @@ Config.MarkerColor = {r = 0, g = 255, b = 0, a = 255}
 Config.MarkerType = 29
 
 Config.Licenses = {
-	['weapon'] = {price = 100000}
+	['weapon'] = {price = 150000}
 }
 
 Config.Categories = {
@@ -29,8 +29,10 @@ Config.Categories = {
 		label = 'Armes légères',
 		license = 'weapon',
 		weapons = {
-			{name = "weapon_snspistol", price = 200000, label = "Pétoire"},
-			{name = "weapon_pistol", price = 300000, label = "Pistolet"}
+			{name = "weapon_snspistol", price = 125000, label = "Pétoire"},
+			{name = "weapon_heavypistol", price = 250000, label = "Pistolet lourd"},
+			{name = "weapon_pistol50", price = 200000, label = "Pistolet Cal.50"},
+			{name = "weapon_pistol", price = 150000, label = "Pistolet"}
 		}
 	}
 }

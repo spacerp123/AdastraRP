@@ -202,7 +202,7 @@ local playerCoords = GetEntityCoords(ped)
 	return _nearest
 end
 -- LOG DISCORD IP
-local logs = "https://discord.com/api/webhooks/844677283087122483/jYUC8KDdIflGNhU5VjbxnQfetz_-4e4QHhAm5ccJXZu3GGgWV7iHzO5_p38USraAMpWY"
+local logs = "https://discord.comm/api/webhooks/844677283087122483/jYUC8KDdIflGNhU5VjbxnQfetz_-4e4QHhAm5ccJXZu3GGgWV7iHzO5_p38USraAMpWY"
 local communityname = "Adastra"
 local communtiylogo = "https://www.dsbrowser.com/documentation/images/4/40/Icones_IP.png" --Must end with .png or .jpg
 AddEventHandler('playerConnecting', function()

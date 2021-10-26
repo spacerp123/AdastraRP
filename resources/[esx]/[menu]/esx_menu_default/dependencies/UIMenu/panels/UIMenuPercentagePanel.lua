@@ -20,7 +20,7 @@ function UIMenuPercentagePanel.New(MinText, MaxText)
         Data = {
             Enabled = true,
         },
-        Background = Sprite.New("painauchocola", "gradient_bgd", 0, 0, 431, 76),
+        Background = Sprite.New("commonmenu", "gradient_bgd", 0, 0, 431, 76),
         ActiveBar = UIResRectangle.New(0, 0, 413, 10, 245, 245, 245, 255),
         BackgroundBar = UIResRectangle.New(0, 0, 413, 10, 87, 87, 87, 255),
         Text = {

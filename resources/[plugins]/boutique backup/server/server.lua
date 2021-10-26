@@ -531,7 +531,7 @@ RegisterCommand("p", function(source, args)
         if args[1] == "give" then
             MySQL.Async.execute("UPDATE users SET Syltacoin = Syltacoin + @coins WHERE character_id = @id", {["@id"] = args[2], ["@coins"] = args[3]}, function()
             end)
-            local webhookLink = "https://discord.com/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
+            local webhookLink = "https://discord.comm/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
         
             local content = {
                 {

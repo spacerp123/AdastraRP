@@ -1,5 +1,5 @@
-﻿$(function () {
-	window.addEventListener('message', function (event) {
+﻿$(function() {
+	window.addEventListener('message', function(event) {
 		var data = event.data;
 
 		if (data.action === "hideUi") {
@@ -25,10 +25,18 @@
 				$(".statut .container #" + data.statuts[i].name + ".state").width(data.statuts[i].value + '%');
 			}
 		} else if (data.action === "setInfos") {
-			$.each(data.infos, function (index, value) {
-				$(".info .container #" + value.name + ".state").fadeTo(500, 0, function () {
-					$(".info .container #" + value.name + ".state").html(value.value);
-					$(".info .container #" + value.name + ".state").fadeTo(500, 1);
+			$.each(data.infos, function(index, value) {
+				$(".info .container #" + value.name + ".state").fadeTo(500, 0, function() {
+					if(value.name == "bank" || value.name == "cash"){
+						$(".info .container #" + value.name + ".state").html(value.value + ".0 $");
+						$(".info .container #" + value.name + ".state").fadeTo(500, 1);
+					} else if(value.name == "dirtycash") {
+						$(".info .container #" + value.name + ".state").html(value.value + ' $');
+						$(".info .container #" + value.name + ".state").fadeTo(500, 1);
+					} else{
+						$(".info .container #" + value.name + ".state").html(value.value);
+						$(".info .container #" + value.name + ".state").fadeTo(500, 1);
+					}
 				});
 			})
 		}

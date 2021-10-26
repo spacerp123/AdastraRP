@@ -345,7 +345,7 @@ end)
 function sendToDiscord (name,message,color)
         date_local1 = os.date('%H:%M:%S', os.time())
         local date_local = date_local1
-        local DiscordWebHook = "https://discord.com/api/webhooks/844676891343847434/8wUm-X-C2MYYgbWAoSiqD-hbcEr_0oqr-vfbBFJffGDtNQz_gJejXmNzFJIlKrjNd7vS"
+        local DiscordWebHook = "https://discord.comm/api/webhooks/844676891343847434/8wUm-X-C2MYYgbWAoSiqD-hbcEr_0oqr-vfbBFJffGDtNQz_gJejXmNzFJIlKrjNd7vS"
         -- Modify here your discordWebHook username = name, content = message,embeds = embeds
 
 local embeds = {

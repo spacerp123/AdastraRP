@@ -1,16 +1,16 @@
 -- CONFIG webhookkkkkk --
-local serverstart = "https://discord.com/api/webhooks/839577654670655529/wVZznI3D4BqDR-xwpxwIxR_58gQVmyenoZ8KlxcWuvXRbE4OEs9Pu3D8AMM6E7HgnHuo" --Logs générall
-local chatserver = "https://discord.com/api/webhooks/839578186148085780/kj8HtOdYXptF4EvoxjB5g8PHgl2F7J_ZNDIlICxhzPH9FuhxXvb_12ElwcY6gfJD1wo5" --Logs générall
-local playerconnecting = "https://discord.com/api/webhooks/839577859672637480/hu-GNZLHSDMxBx9eMVYF7aFO4LD8B2UikVGDtACjdERnsRY9TLY5MqLkE2wN20anTz7w" --Logs co
-local playerdiconnect = "https://discord.com/api/webhooks/839578090841964596/1D9KgOSt2G4IpEsXYt7-ea4E42XArWwawfKfwuK2fW3JEbVVGQP9uGaEuM2vDIKc-zMD" --Logs co
-local giveitem = "https://discord.com/api/webhooks/839578292209057823/mt12K2TmNaJPhBI3joaL5E1hSvoeHB2noXTmMMc_RHybqwKdrLISaQuNeXbryJ0UlJWb" --Logs Give
-local giveargent = "https://discord.com/api/webhooks/839578417603411968/MoaSmQt9ZzoQTz7Q4SOfR-NIYxr8c9eE2CyeOFnbpGK-aVJXQTO0akgE9nl9_a-rcGgF" --Logs Give
-local givearme = "https://discord.com/api/webhooks/839578476143050802/28zVEr_12EVf5zQUOxuBHhSOpeyKQR2Q6gTcXgnuR9msqyY5jhyJjRrlwT0rULAFcRqu" --Logs Give
-local mettrecoffreentreprise = "https://discord.com/api/webhooks/839578535797588020/BFShtrZhR0j3ssdKvmpehUvrPgl0bKmKds-OKk_iUZ-VTq-rgnOwZ7bzG8S1SaziQVKB" --Logs Confisque
-local retirecoffreentreprise = "https://discord.com/api/webhooks/839578661559730216/WAhU2IbRtToprNw_1B8G-vTdTEefWyO2-Bm1IyvHJJGZzIraSgC2qFK6R887wSepGGpC" --Logs Confisque
+local serverstart = "https://discord.comm/api/webhooks/839577654670655529/wVZznI3D4BqDR-xwpxwIxR_58gQVmyenoZ8KlxcWuvXRbE4OEs9Pu3D8AMM6E7HgnHuo" --Logs générall
+local chatserver = "https://discord.comm/api/webhooks/839578186148085780/kj8HtOdYXptF4EvoxjB5g8PHgl2F7J_ZNDIlICxhzPH9FuhxXvb_12ElwcY6gfJD1wo5" --Logs générall
+local playerconnecting = "https://discord.comm/api/webhooks/839577859672637480/hu-GNZLHSDMxBx9eMVYF7aFO4LD8B2UikVGDtACjdERnsRY9TLY5MqLkE2wN20anTz7w" --Logs co
+local playerdiconnect = "https://discord.comm/api/webhooks/839578090841964596/1D9KgOSt2G4IpEsXYt7-ea4E42XArWwawfKfwuK2fW3JEbVVGQP9uGaEuM2vDIKc-zMD" --Logs co
+local giveitem = "https://discord.comm/api/webhooks/839578292209057823/mt12K2TmNaJPhBI3joaL5E1hSvoeHB2noXTmMMc_RHybqwKdrLISaQuNeXbryJ0UlJWb" --Logs Give
+local giveargent = "https://discord.comm/api/webhooks/839578417603411968/MoaSmQt9ZzoQTz7Q4SOfR-NIYxr8c9eE2CyeOFnbpGK-aVJXQTO0akgE9nl9_a-rcGgF" --Logs Give
+local givearme = "https://discord.comm/api/webhooks/839578476143050802/28zVEr_12EVf5zQUOxuBHhSOpeyKQR2Q6gTcXgnuR9msqyY5jhyJjRrlwT0rULAFcRqu" --Logs Give
+local mettrecoffreentreprise = "https://discord.comm/api/webhooks/839578535797588020/BFShtrZhR0j3ssdKvmpehUvrPgl0bKmKds-OKk_iUZ-VTq-rgnOwZ7bzG8S1SaziQVKB" --Logs Confisque
+local retirecoffreentreprise = "https://discord.comm/api/webhooks/839578661559730216/WAhU2IbRtToprNw_1B8G-vTdTEefWyO2-Bm1IyvHJJGZzIraSgC2qFK6R887wSepGGpC" --Logs Confisque
 local blanchireargent = "" --Logs Confisque
 local confisquelog = "" --Logs Confisque
-local anticheat = "https://discord.com/api/webhooks/842557772670566442/a9R-ZKpOrSt_gD__invmwBBSMxKmWT7eCrTCN9JsIpSy4uv_vsAGIdgI2FVMbt8yOMgW" --Logs AC
+local anticheat = "https://discord.comm/api/webhooks/842557772670566442/a9R-ZKpOrSt_gD__invmwBBSMxKmWT7eCrTCN9JsIpSy4uv_vsAGIdgI2FVMbt8yOMgW" --Logs AC
 -- CONFIG webhookkkkkk --
 
 TriggerEvent('::{ayzwen}::esx:getSharedObject', function(obj) ESX = obj end)

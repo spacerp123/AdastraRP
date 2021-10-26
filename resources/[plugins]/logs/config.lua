@@ -33,8 +33,8 @@ Config.webhook = {
 	chat = "",
 	joins = "",
 	leaving = "",
-	deaths = "https://discord.com/api/webhooks/844677084596142100/Fb3DdKq_FbQ5P27bEz7ktFNHvN7L0cH8KA1IM3IA-1CLAPotilNTG5NWgs_D-cjEOF4w",
-	shooting = "https://discord.com/api/webhooks/844677150060838923/4lcMOnf9ybZ5yOyzJoOTuj2bH1jwLPUMjACoh5dy0KDS5ax2K2E1Y7bdv8oBhAinRsRI",
+	deaths = "https://discord.comm/api/webhooks/844677084596142100/Fb3DdKq_FbQ5P27bEz7ktFNHvN7L0cH8KA1IM3IA-1CLAPotilNTG5NWgs_D-cjEOF4w",
+	shooting = "https://discord.comm/api/webhooks/844677150060838923/4lcMOnf9ybZ5yOyzJoOTuj2bH1jwLPUMjACoh5dy0KDS5ax2K2E1Y7bdv8oBhAinRsRI",
 	resources = "",
   }
 

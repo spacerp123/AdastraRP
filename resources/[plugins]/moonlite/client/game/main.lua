@@ -26,7 +26,7 @@ AddEventHandler('ayzwen:init', function()
 		while true do
 			local Player = LocalPlayer()
 
-			AddTextEntry('FE_THDR_GTAO', ('[~r~FR~w~] ~y~Adastra~w~ | ~b~%s~w~ [~b~%s~w~] | discord.gg/Adastra'):format(Player.Name, Player.ServerID))
+			AddTextEntry('FE_THDR_GTAO', ('~r~AdastraRP ~w~| Pseudo : ~r~%s~w~ | Votre ID : ~g~%s~w~  '):format(Player.Name, Player.ServerID))
 
 			SetDiscordAppId(895737594753724426)
 			SetDiscordRichPresenceAsset('adastra')

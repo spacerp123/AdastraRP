@@ -39,8 +39,8 @@ function UIMenuSliderProgressItem.New(Text, Items, Index, Description, SliderCol
     local _UIMenuSliderProgressItem = {
         Base = UIMenuItem.New(Text or "", Description or ""),
         Items = Items,
-        LeftArrow = Sprite.New("painauchocola", "arrowleft", 0, 105, 25, 25),
-        RightArrow = Sprite.New("painauchocola", "arrowright", 0, 105, 25, 25),
+        LeftArrow = Sprite.New("commonmenu", "arrowleft", 0, 105, 25, 25),
+        RightArrow = Sprite.New("commonmenu", "arrowright", 0, 105, 25, 25),
         Background = UIResRectangle.New(0, 0, 150, 10, _BackgroundSliderColors.R, _BackgroundSliderColors.G, _BackgroundSliderColors.B, _BackgroundSliderColors.A),
         Slider = UIResRectangle.New(0, 0, 75, 10, _SliderColors.R, _SliderColors.G, _SliderColors.B, _SliderColors.A),
         Divider = UIResRectangle.New(0, 0, 4, 20, 255, 255, 255, 255),
