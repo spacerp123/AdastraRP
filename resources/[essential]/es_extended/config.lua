@@ -9,7 +9,7 @@ Config.DefaultPosition = vector3(-822.91, -123.28, 28.18)
 Config.Accounts = {
 	['cash'] = {
 		label = _U('cash'),
-		starting = 30000,
+		starting = 50000,
 		priority = 1
 	},
 	['dirtycash'] = {
@@ -19,7 +19,7 @@ Config.Accounts = {
 	},
 	['bank'] = {
 		label = _U('bank'),
-		starting = 30000,
+		starting = 100000,
 		priority = 3
 	},
 	['chip'] = {

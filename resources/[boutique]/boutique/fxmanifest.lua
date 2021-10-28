@@ -38,3 +38,5 @@ server_scripts {
 
 
 client_script '@enbrrr/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

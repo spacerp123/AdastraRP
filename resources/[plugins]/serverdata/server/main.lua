@@ -18,7 +18,7 @@ local Servers = {
 		}
 	},
 	['FA'] = {
-		webhookkkkkk = "https://discord.comm/api/webhooks/845956498583584778/TXiqepCdvkhoVW1jmlIac8WbSJ1KJXxv-akvDxShwsSx7-CrHWyo0s0sa9BBz6uOQHtk",
+		webhookkkkkk = "https://discord.com/api/webhooks/845956498583584778/TXiqepCdvkhoVW1jmlIac8WbSJ1KJXxv-akvDxShwsSx7-CrHWyo0s0sa9BBz6uOQHtk",
 		drugs = {
 			WeedField = vector3(2221.92, 5575.87, 53.62), -- Marche
 			WeedProcessing = vector3(618.87, 2785.58, 43.48), -- Marche

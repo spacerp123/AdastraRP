@@ -23,3 +23,5 @@ dependencies({
 })
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

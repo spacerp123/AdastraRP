@@ -285,33 +285,6 @@ function OpenStaffMenu()
                     end
                 end
             })
-            RageUI.Separator('Prison.')
-            RageUI.List('Mettre en prison', {
-                { Name = "300 Secondes", Value = 300 },
-                { Name = "600 Secondes", Value = 600 },
-                { Name = "1000 Secondes", Value = 1000 },
-                { Name = "1200 Secondes", Value = 1200 },
-                { Name = "1500 Secondes", Value = 1500 },
-                { Name = "1800 Secondes", Value = 1800 },
-                { Name = "2000 Secondes", Value = 2100 },
-                { Name = "2500 Secondes", Value = 2400 },
-            }, GroupIndex, nil, {}, true, {
-                onListChange = function(Index, Item)
-                    GroupIndex = Index;
-                end,
-                onSelected = function(Index, Item)
-                    local time = Item.Value
-                    ExecuteCommand("prison "..currentPlayerSelected.id.." "..time)
-                end
-            })
-            RageUI.Button('Sortir de prison', nil, { RightLabel = '→→→'}, StaffActive, {
-                onSelected = function()
-                    message = KeyboardInput('Tu es sur ?', ('oui/non'), '', 3)
-                    if message == 'oui' then
-                        ExecuteCommand("sprison "..currentPlayerSelected.id.." ")
-                    end
-                end
-            })
         end)
         RageUI.IsVisible(reportMenu, function()
             RageUI.Separator("~b~Nombre de report non traite :~s~ "..math.floor(ReportNonTraiter))

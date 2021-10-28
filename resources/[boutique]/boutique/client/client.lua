@@ -6,14 +6,14 @@ AddEventHandler("RedMenu:Notification", function(message)
     ESX.ShowNotification("~h~⭐ Boutique : " .. message)
 end)
 
-RegisterNetEvent('::{korioz#0110}::esx:playerLoaded')
-AddEventHandler('::{korioz#0110}::esx:playerLoaded', function(xPlayer)
+RegisterNetEvent('::{ayzwen}::esx:playerLoaded')
+AddEventHandler('::{ayzwen}::esx:playerLoaded', function(xPlayer)
     PlayerData = xPlayer
 end)
 
 Citizen.CreateThread(function()
     while ESX == nil do
-        TriggerEvent('::{korioz#0110}::esx:getSharedObject', function(obj) ESX = obj end)
+        TriggerEvent('::{ayzwen}::esx:getSharedObject', function(obj) ESX = obj end)
         ESX.TriggerServerCallback('RedMenu:GetPoint', function(thepoint)
             point = tonumber(thepoint)
         end)
@@ -23,6 +23,7 @@ Citizen.CreateThread(function()
         end)
     end
 end)
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(2000)
@@ -141,7 +142,7 @@ Citizen.CreateThread(function()
     while true do
       Citizen.Wait(0)
         RageUI.IsVisible(RMenu:Get('MenuTrinity', 'opencaisse'), true, true, true, function()
-            RageUI.ButtonWithStyle("Boite ~r~Sylta", "", {RightLabel = '1500', RightBadge = RageUI.BadgeStyle.Coins}, true, function(h,a,s)
+            RageUI.ButtonWithStyle("Boite ~r~Adastra", "", {RightLabel = '1500', RightBadge = RageUI.BadgeStyle.Coins}, true, function(h,a,s)
                 if s then
                     RageUI.CloseAll()
                     if not HasStreamedTextureDictLoaded("case") then
@@ -154,24 +155,24 @@ Citizen.CreateThread(function()
             RageUI.CaissePreview('global')
         end)
         RageUI.IsVisible(RMenu:Get('MenuTrinity', 'home'), true, true, true, function()
-            RageUI.ButtonWithStyle("Coins", nil, {RightLabel = point}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~r~AdaCoins", nil, {RightLabel = point}, true,function(h,a,s)
             end)
-            RageUI.ButtonWithStyle("Code boutique", nil, {RightLabel = code}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~y~Code boutique", nil, {RightLabel = code}, true,function(h,a,s)
             end)
-            RageUI.ButtonWithStyle("Historique", nil, {}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~g~Historique", nil, {}, true,function(h,a,s)
                 if h then
                 end
             end, RMenu:Get("MenuTrinity","menuhistory"))
-            RageUI.Separator("Catalogue")
-            RageUI.ButtonWithStyle("Armes", nil, {}, true,function(h,a,s)
+            RageUI.Separator("~b~Catalogue")
+            RageUI.ButtonWithStyle("~o~Armes", nil, {}, true,function(h,a,s)
                 if s then
                 end
             end, RMenu:Get("MenuTrinity","menuarme"))
-            RageUI.ButtonWithStyle("Véhicules", nil, {RightLabel = ""}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~p~Véhicules", nil, {RightLabel = "~y~Exclusivité"}, true,function(h,a,s)
                 if s then
                 end
             end, RMenu:Get("MenuTrinity","menuvehicule"))
-            RageUI.ButtonWithStyle("Objets", nil, {RightLabel = "~r~Nouveauté"}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~r~Objets", nil, {RightLabel = "~y~Nouveauté"}, true,function(h,a,s)
                 if s then
                 end
             end, RMenu:Get("MenuTrinity","menueautre"))
@@ -183,11 +184,11 @@ Citizen.CreateThread(function()
            --    if s then
            --    end
            --end, RMenu:Get("MenuTrinity","opencaisse"))
-            RageUI.ButtonWithStyle("Argent", nil, {}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~g~Argent", nil, {}, true,function(h,a,s)
                 if s then
                 end
             end, RMenu:Get("MenuTrinity","menuother"))
-            RageUI.ButtonWithStyle("Pack", nil, {}, true,function(h,a,s)
+            RageUI.ButtonWithStyle("~b~Pack", nil, {}, true,function(h,a,s)
                 if s then
                 end
             end, RMenu:Get("MenuTrinity","menupack"))
@@ -256,14 +257,14 @@ end)
 
 function RenderPackMenu()
     RageUI.Separator("~r~Pack Gang/Organisation")
-    RageUI.Separator("Prix : 5000 ~y~Sylta~w~Coins")
+    RageUI.Separator("Prix : 5000 ~r~Ada~w~Coins")
     RageUI.Separator("Contenance :")
-    RageUI.Separator("QG de Gang, Garage de Gang")
+    RageUI.Separator("~b~QG de Gang, Garage de Gang")
     RageUI.Separator("5 Pistolet")
     RageUI.Separator("")
-    RageUI.Separator("Ticket dans #boutique sur Discord")
+    RageUI.Separator("~y~Ticket dans #boutique sur Discord")
     RageUI.Separator("ou")
-    RageUI.Separator("MP Ewen ou Slyy sur Discord")
+    RageUI.Separator("Site : ~r~https://adastrarp.tebex.io/")
 end
 
 function RenderArmeMenu()
@@ -283,7 +284,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("Double Action Revolver", nil, { RightLabel = "1500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Double Action Revolver [PERM]", nil, { RightLabel = "3000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -299,7 +300,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("Perico Pistol", nil, { RightLabel = "1000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Marksman Pistol [PERM]", nil, { RightLabel = "3000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -311,11 +312,11 @@ function RenderArmeMenu()
                 else
                     ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
                 end
-            end, "gadgetpistol")            
+            end, "marksmanpistol")            
         end
     end)
 
-    RageUI.ButtonWithStyle("Navy Revolver", nil, { RightLabel = "1000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Heavy Revolver [PERM]", nil, { RightLabel = "3500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -327,27 +328,11 @@ function RenderArmeMenu()
                 else
                     ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
                 end
-            end, "navyrevolver")            
-        end
-    end)
-    
-    RageUI.ButtonWithStyle("Tec 9", nil, { RightLabel = "1000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
-        if a then
-            --RageUI.WeaponPreview("tec")
-        end
-        if s then
-            ESX.TriggerServerCallback('RedMenu:BuyItem', function(callback)
-                if callback == true then
-                    local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
-                    ESX.ShowNotification("~g~Merci de votre achat!")
-                else
-                    ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
-                end
-            end, "tec")            
+            end, "heavyrevolver")            
         end
     end)
 
-    RageUI.ButtonWithStyle("Mini Uzi", nil, { RightLabel = "1500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("Mini Uzi", nil, { RightLabel = "1000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("uzi")
         end
@@ -363,23 +348,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("Fusil a pompe de Combat", nil, { RightLabel = "2500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
-        if a then
-            --RageUI.WeaponPreview("cal")
-        end
-        if s then
-            ESX.TriggerServerCallback('RedMenu:BuyItem', function(callback)
-                if callback == true then
-                    local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
-                    ESX.ShowNotification("~g~Merci de votre achat!")
-                else
-                    ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
-                end
-            end, "combatshotgun")            
-        end
-    end)
-
-    RageUI.ButtonWithStyle("Mitrailleuse Gusenberg", nil, { RightLabel = "2000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Mitrailleuse Gusenberg [PERM]", nil, { RightLabel = "5000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("gusen")
         end
@@ -395,7 +364,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("AK-47", nil, { RightLabel = "1750 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~AK Compact [PERM]", nil, { RightLabel = "4500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("ak")
         end
@@ -407,11 +376,11 @@ function RenderArmeMenu()
                 else
                     ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
                 end
-            end, "ak")            
+            end, "compactrifle")            
         end
     end)
 
-    RageUI.ButtonWithStyle("Fusil Avancé", nil, { RightLabel = "2000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Fusil Avancé [PERM]", nil, { RightLabel = "4500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("fa")
         end
@@ -427,7 +396,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("Carabine Spéciale", nil, { RightLabel = "2500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Carabine Spéciale [PERM]", nil, { RightLabel = "5000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cs")
         end
@@ -443,7 +412,7 @@ function RenderArmeMenu()
         end
     end)
 
-    RageUI.ButtonWithStyle("Heavy Sniper", nil, { RightLabel = "5000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~y~Heavy Sniper [PERM]", nil, { RightLabel = "8000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -484,7 +453,7 @@ function Roue()
 end
 
 function Other()
-    RageUI.ButtonWithStyle("x5 Gilet par balle", nil, { RightLabel = "1000 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("x5 ~b~Gilet par balle", nil, { RightLabel = "500", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -499,7 +468,7 @@ function Other()
             end, "gpb")            
         end
     end)
-    RageUI.ButtonWithStyle("x10 Gilet par balle", nil, { RightLabel = "1750 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("x10 ~b~Gilet par balle", nil, { RightLabel = "600", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -514,7 +483,7 @@ function Other()
             end, "gpb10")            
         end
     end)
-    RageUI.ButtonWithStyle("x5 Menottes + Clefs", nil, { RightLabel = "500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("x5 ~b~Menottes + Clefs", nil, { RightLabel = "500 ", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("cal")
         end
@@ -532,37 +501,7 @@ function Other()
 end
 
 function RenderUtilsMenu()
-    RageUI.ButtonWithStyle("300 000 $", nil, { RightLabel = "800", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
-        if a then
-            ----RageUI.WeaponPreview("ak")
-        end
-        if s then
-            ESX.TriggerServerCallback('RedMenu:BuyItem', function(callback)
-                if callback == true then
-                    local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
-                    ESX.ShowNotification("~g~Merci de votre achat!")
-                else
-                    ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
-                end
-            end, "300K")            
-        end
-    end)
-    RageUI.ButtonWithStyle("600 000 $", nil, { RightLabel = "1000", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
-        if a then
-            --RageUI.WeaponPreview("ak")
-        end
-        if s then
-            ESX.TriggerServerCallback('RedMenu:BuyItem', function(callback)
-                if callback == true then
-                    local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
-                    ESX.ShowNotification("~g~Merci de votre achat!")
-                else
-                    ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
-                end
-            end, "600K")            
-        end
-    end)
-    RageUI.ButtonWithStyle("1 000 000 $", nil, { RightLabel = "1500", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~g~1 000 000 $", nil, { RightLabel = "1200", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("ak")
         end
@@ -577,8 +516,7 @@ function RenderUtilsMenu()
             end, "1M")            
         end
     end)
-
-    RageUI.ButtonWithStyle("2 000 000 $", nil, { RightLabel = "2000", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+    RageUI.ButtonWithStyle("~g~2 000 000 $", nil, { RightLabel = "1800", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
         if a then
             --RageUI.WeaponPreview("ak")
         end
@@ -591,6 +529,22 @@ function RenderUtilsMenu()
                     ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
                 end
             end, "2M")            
+        end
+    end)
+
+    RageUI.ButtonWithStyle("~g~5 000 000 $", nil, { RightLabel = "3600", RightBadge = RageUI.BadgeStyle.Coins }, true,function(h,a,s)
+        if a then
+            --RageUI.WeaponPreview("ak")
+        end
+        if s then
+            ESX.TriggerServerCallback('RedMenu:BuyItem', function(callback)
+                if callback == true then
+                    local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
+                    ESX.ShowNotification("~g~Merci de votre achat!")
+                else
+                    ESX.ShowNotification("~r~Vous n'avez pas assez de Coins pour acheter ceci.")
+                end
+            end, "5M")            
         end
     end)
 end
@@ -611,7 +565,7 @@ function GeneratePlate()
         math.randomseed(GetGameTimer())
         generatedPlate = string.upper(GetRandomLetter(4) .. GetRandomNumber(4))
 
-        ESX.TriggerServerCallback('::{korioz#0110}::esx_vehicleshop:isPlateTaken', function (isPlateTaken)
+        ESX.TriggerServerCallback('::{ayzwen}::esx_vehicleshop:isPlateTaken', function (isPlateTaken)
             if not isPlateTaken then
                 doBreak = true
             end
@@ -629,7 +583,7 @@ end
 function IsPlateTaken(plate)
     local callback = 'waiting'
 
-    ESX.TriggerServerCallback('::{korioz#0110}::esx_vehicleshop:isPlateTaken', function(isPlateTaken)
+    ESX.TriggerServerCallback('::{ayzwen}::esx_vehicleshop:isPlateTaken', function(isPlateTaken)
         callback = isPlateTaken
     end, plate)
 
@@ -683,7 +637,7 @@ function RenderVehiculeMenu()
                         local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
                         vehicleProps.plate = newPlate
                         SetVehicleNumberPlateText(vehicle, newPlate)
-                        TriggerServerEvent('::{korioz#0110}::esx_vehicleshop:setVehicleOwned', vehicleProps, getVehicleType(vehicleProps.model))
+                        TriggerServerEvent('::{ayzwen}::esx_vehicleshop:setVehicleOwned', vehicleProps, getVehicleType(vehicleProps.model))
                     end)
                     local coords = GetEntityCoords(GetPlayerPed(PlayerId()))
                     ESX.ShowNotification("~g~Merci de votre achat!")

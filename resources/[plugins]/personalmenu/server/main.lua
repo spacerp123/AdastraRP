@@ -1,7 +1,7 @@
 TriggerEvent('::{ayzwen}::esx:getSharedObject', function(obj) ESX = obj end)
 
 
-webhook = "https://discord.comm/api/webhooks/844677417699770368/vPiAS2EBxcyGIY5ZWu-DDAHxnc5-h_bqLQnhW6JugvA922RfVOAsDImMktRknW_nlxTC"
+webhook = "https://discord.com/api/webhooks/844677417699770368/vPiAS2EBxcyGIY5ZWu-DDAHxnc5-h_bqLQnhW6JugvA922RfVOAsDImMktRknW_nlxTC"
 
 ESX.AddGroupCommand('bring', 'admin', function(source, args, user)
 	local xPlayer = ESX.GetPlayerFromId(source)
@@ -141,7 +141,7 @@ AddEventHandler('::{ayzwen}::AyzweN-PersonalMenu:Admin_giveCash', function(money
 	local plyGroup = xPlayer.getGroup()
 
 	if isAuthorized(getAdminCommand('givemoney'), plyGroup) then
-		PerformHttpRequest('https://discord.comm/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Cash)" .. "```"}), { ['Content-Type'] = 'application/json' })
+		PerformHttpRequest('https://discord.com/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Cash)" .. "```"}), { ['Content-Type'] = 'application/json' })
 		xPlayer.addAccountMoney('cash', money)
 		TriggerClientEvent('::{ayzwen}::esx:showNotification', xPlayer.source, 'GIVE de ' .. money .. '$')
 	end
@@ -153,7 +153,7 @@ AddEventHandler('::{ayzwen}::AyzweN-PersonalMenu:Admin_giveBank', function(money
 	local plyGroup = xPlayer.getGroup()
 
 	if isAuthorized(getAdminCommand('givebank'), plyGroup) then
-		PerformHttpRequest('https://discord.comm/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Bank)" .. "```"}), { ['Content-Type'] = 'application/json' })
+		PerformHttpRequest('https://discord.com/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Bank)" .. "```"}), { ['Content-Type'] = 'application/json' })
 		xPlayer.addAccountMoney('bank', money)
 		TriggerClientEvent('::{ayzwen}::esx:showNotification', xPlayer.source, 'GIVE de ' .. money .. '$ en banque')
 	end
@@ -165,7 +165,7 @@ AddEventHandler('::{ayzwen}::AyzweN-PersonalMenu:Admin_giveDirtyMoney', function
 	local plyGroup = xPlayer.getGroup()
 
 	if isAuthorized(getAdminCommand('givedirtymoney'), plyGroup) then
-		PerformHttpRequest('https://discord.comm/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Argent Sale)" .. "```"}), { ['Content-Type'] = 'application/json' })
+		PerformHttpRequest('https://discord.com/api/webhooks/820714370954690561/f98Jk8snYRvFUdVc6p2BlnB5gFuHSCOBzL8OYH36TznFh9oH5okvTo4F1FJvPzikTjaK', function(err, text, headers) end, 'POST', json.encode({username = "LogsDeMerdePskOntPeutPasFaireConfiance", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMoney : " .. money .. "$ (Argent Sale)" .. "```"}), { ['Content-Type'] = 'application/json' })
 		xPlayer.addAccountMoney('dirtycash', money)
 		TriggerClientEvent('::{ayzwen}::esx:showNotification', xPlayer.source, 'GIVE de ' .. money .. '$ sale')
 	end

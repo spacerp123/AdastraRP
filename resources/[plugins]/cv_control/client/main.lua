@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 		
 		if IsPedInAnyVehicle(PlayerPedId()) then
-			if IsControlJustPressed(0, 288) then
+			if IsControlJustPressed(0, 121) then
 				createSpeedoMenu()
 				Menu.hidden = not Menu.hidden
 			end

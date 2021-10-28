@@ -40,3 +40,5 @@ client_script '@HelicoAddons/xDxDxDxDxD.lua'
 client_script '@HelicoAddons/xDxDxDxDxD.lua'
 
 client_script '@HelicoAddons/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

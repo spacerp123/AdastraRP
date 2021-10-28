@@ -5,13 +5,13 @@ local SettingsButton = {
 	LeftBadge = { Y = -2, Width = 40, Height = 40 },
 	RightBadge = { X = 385, Y = -2, Width = 40, Height = 40 },
 	RightText = { X = 420, Y = 4, Scale = 0.35 },
-	SelectedSprite = { Dictionary = "commonmenu", Texture = "gradient_nav", Y = 0, Width = 431, Height = 38 }
+	SelectedSprite = { Dictionary = "painauchocola", Texture = "gradient_nav", Y = 0, Width = 431, Height = 38 }
 }
 
 ---@type table
 local SettingsList = {
-	LeftArrow = { Dictionary = "commonmenu", Texture = "arrowleft", X = 378, Y = 3, Width = 30, Height = 30 },
-	RightArrow = { Dictionary = "commonmenu", Texture = "arrowright", X = 400, Y = 3, Width = 30, Height = 30 },
+	LeftArrow = { Dictionary = "painauchocola", Texture = "arrowleft", X = 378, Y = 3, Width = 30, Height = 30 },
+	RightArrow = { Dictionary = "painauchocola", Texture = "arrowright", X = 400, Y = 3, Width = 30, Height = 30 },
 	Text = { X = 403, Y = 3, Scale = 0.35 }
 }
 

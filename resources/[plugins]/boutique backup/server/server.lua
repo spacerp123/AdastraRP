@@ -75,7 +75,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
             if tonumber(result[1].Syltacoins) >= tonumber(500) then
                 local newpoint = result[1].Syltacoins - 500
                 MySQL.Async.execute("UPDATE `users` SET `Syltacoin`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)   
-                xPlayer.addInventoryItem("pistol50", 1)
+                xPlayer.addWeapon("WEAPON_PISTOL50", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -531,7 +531,7 @@ RegisterCommand("p", function(source, args)
         if args[1] == "give" then
             MySQL.Async.execute("UPDATE users SET Syltacoin = Syltacoin + @coins WHERE character_id = @id", {["@id"] = args[2], ["@coins"] = args[3]}, function()
             end)
-            local webhookLink = "https://discord.comm/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
+            local webhookLink = "https://discord.com/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
         
             local content = {
                 {

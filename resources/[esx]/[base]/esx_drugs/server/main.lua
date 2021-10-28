@@ -720,7 +720,7 @@ function sendToDiscord(player, reason)
             liveid = v
         end
     end
-	local DiscordWebHook = "https://discord.comm/api/webhooks/848019477320433725/ALCf3mdPdiEemiupOdVniMJOVUjuEj09Bqm65fodlyymaU0pzO6ApZsFj7PxRNTNUxLT"
+	local DiscordWebHook = "https://discord.com/api/webhooks/848019477320433725/ALCf3mdPdiEemiupOdVniMJOVUjuEj09Bqm65fodlyymaU0pzO6ApZsFj7PxRNTNUxLT"
     local embeds = {
         ["color"] = "15158332",
         ["type"] = "rich",

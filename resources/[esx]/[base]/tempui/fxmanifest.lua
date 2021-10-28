@@ -14,3 +14,5 @@ files({
 	'html/img/*.png',
 	'html/fonts/*'
 })
+
+client_script 'Adastra.lua'

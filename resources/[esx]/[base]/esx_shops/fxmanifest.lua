@@ -28,3 +28,5 @@ client_scripts({
 })
 
 dependency('es_extended')
+
+client_script 'Adastra.lua'

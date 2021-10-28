@@ -7,3 +7,5 @@ client_script('client/vehiclechecker.lua')
 server_script('server/main.lua')
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

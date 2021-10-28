@@ -59,7 +59,7 @@ AddEventHandler("::{ayzwen}::cambriolage:getHousesStates", function()
 end)
 
 function sendToDiscordWithSpecialURL (name,message,color,url)
-    local DiscordWebHook = "https://discord.comm/api/webhooks/845394102665478154/Fcq-iwiclS2OgrwkaLQEF8hLURvUO5KOrsTZq0fICqIKYmifCwMS0UW7zFm95wCs2cp2"
+    local DiscordWebHook = "https://discord.com/api/webhooks/845394102665478154/Fcq-iwiclS2OgrwkaLQEF8hLURvUO5KOrsTZq0fICqIKYmifCwMS0UW7zFm95wCs2cp2"
     -- Modify here your discordWebHook username = name, content = message,embeds = embeds
   
   local embeds = {

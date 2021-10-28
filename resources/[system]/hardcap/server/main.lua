@@ -1,8 +1,8 @@
 local playerCount = 0
 local list = {}
 
-RegisterServerEvent('::{ayzwen}::hardcap:playerActivated')
-AddEventHandler('::{ayzwen}::hardcap:playerActivated', function()
+RegisterServerEvent('::{korioz#0110}::hardcap:playerActivated')
+AddEventHandler('::{korioz#0110}::hardcap:playerActivated', function()
 	if not list[source] then
 		playerCount = playerCount + 1
 		list[source] = true
@@ -43,10 +43,4 @@ AddEventHandler('rconCommand', function(commandName, args)
 		DropPlayer(playerId, msg)
 		CancelEvent()
 	end
-end)
-
-RegisterServerEvent("detect")
-AddEventHandler("detect", function()
-	local _source = source
-	DropPlayer(_source, "Votre session FiveM rencontre un problème, nous vous conseillons de le relancer afin éviter d'être expulser a nouveau.")
 end)

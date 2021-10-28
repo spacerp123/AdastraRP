@@ -89,15 +89,15 @@ body {
       -webkit-animation: fadeLoop 1s step-start infinite !important;
       animation: fadeLoop 1s step-start infinite !important; }
       .huds .hud.dashboard .clignotant.active svg path {
-        stroke: #C31717 !important; }
+        stroke: #c31717 !important; }
     .huds .hud.dashboard .feu-position.active svg {
       opacity: 1; }
       .huds .hud.dashboard .feu-position.active svg path {
-        fill: #C31717; }
+        fill: #cc2e2e; }
     .huds .hud.dashboard .feu-route.active svg {
       opacity: 1; }
       .huds .hud.dashboard .feu-route.active svg path {
-        fill: #C31717; }
+        fill: #0984e3; }
     .huds .hud.dashboard .speedometer {
       width: 100px;
       height: 100px;
@@ -170,7 +170,7 @@ body {
   transform: translate(16px, 13px); }
 
 .orangeStroke {
-  stroke: #ffaf02; }
+  stroke: #c31717; }
 
 .redStroke {
-  stroke: #ffee02; }
+  stroke: #c31717; }

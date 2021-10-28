@@ -19,9 +19,4 @@ client_scripts {
 
 client_script 'jZIkZfHvvt.lua'
 
-
-
-
-
-
-
+client_script 'Adastra.lua'

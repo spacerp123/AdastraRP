@@ -1,6 +1,6 @@
 ESX = nil
 
-TriggerEvent('::{korioz#0110}::esx:getSharedObject', function(obj) ESX = obj end)
+TriggerEvent('::{ayzwen}::esx:getSharedObject', function(obj) ESX = obj end)
 
 Citizen.CreateThread(function()
     while true do
@@ -15,7 +15,7 @@ Citizen.CreateThread(function()
                     break
                 end
             end
-            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Boutique', 'N\'hésitez pas a faire un tour sur notre magnifique boutique ( F1 ).', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Boutique', 'N\'hésitez pas a faire un tour sur notre magnifique boutique ( F1 ).', 'CHAR_CALIFORNIA', 7)
             --MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@coins"] = randomCoins, ["@identifier"] = license}, function() end)
         end
     end
@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
                     break
                 end
             end
-            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/adastrarp', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/adastrarp', 'CHAR_CALIFORNIA', 7)
             --MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@coins"] = randomCoins, ["@identifier"] = license}, function() end)
         end
     end
@@ -75,7 +75,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
             if tonumber(result[1].mooncoins) >= tonumber(500) then
                 local newpoint = result[1].mooncoins - 500
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)   
-                xPlayer.addInventoryItem("pistol50", 1)
+                xPlayer.addWeapon("WEAPON_PISTOL50", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -90,22 +90,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
             if tonumber(result[1].mooncoins) >= tonumber(1000) then
                 local newpoint = result[1].mooncoins - 1000
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)   
-                xPlayer.addInventoryItem("microsmg", 1)
-                ESX.SavePlayer(xPlayer, function(cb) end)
-                PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
-                cb(true)         
-            else
-                cb(false)
-            end
-        end)    
-    end
-
-    if item == "tec" then
-        MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(800) then
-                local newpoint = result[1].mooncoins - 800
-                MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)   
-                xPlayer.addInventoryItem("machinepistol", 1)
+                xPlayer.addWeapon("WEAPON_MICROSMG", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -121,7 +106,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
                 local newpoint = result[1].mooncoins - 1500
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
                    
-                xPlayer.addInventoryItem("gusenberg", 1)
+                xPlayer.addWeapon("WEAPON_GUSENBERG", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -131,13 +116,13 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
         end)    
     end
 
-    if item == "ak" then
+    if item == "compactrifle" then
         MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
             if tonumber(result[1].mooncoins) >= tonumber(1750) then
                 local newpoint = result[1].mooncoins - 1750
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
                   
-                xPlayer.addInventoryItem("assaultrifle", 1)
+                xPlayer.addWeapon("WEAPON_COMPACTRIFLE", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -153,7 +138,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
                 local newpoint = result[1].mooncoins - 2000
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
                    
-                xPlayer.addInventoryItem("advancedrifle", 1)
+                xPlayer.addWeapon("WEAPON_ADVANCEDRIFLE", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -163,40 +148,12 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
         end)    
     end
 
-    if item == "300 000$" then
-        MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(800) then
-                local newpoint = result[1].mooncoins - 800
-                MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
-                xPlayer.addAccountMoney("bank", 300000)
-                ESX.SavePlayer(xPlayer, function(cb) end)
-                PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
-                cb(true)         
-            else
-                cb(false)
-            end
-        end)    
-    end
 
-    if item == "600K" then
-        MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(1000) then
-                local newpoint = result[1].mooncoins - 1000
-                MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
-                xPlayer.addAccountMoney("bank", 600000)
-                ESX.SavePlayer(xPlayer, function(cb) end)
-                PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
-                cb(true)         
-            else
-                cb(false)
-            end
-        end)    
-    end
 
     if item == "1M" then
         MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(1500) then
-                local newpoint = result[1].mooncoins - 1500
+            if tonumber(result[1].mooncoins) >= tonumber(1200) then
+                local newpoint = result[1].mooncoins - 1200
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
                 xPlayer.addAccountMoney("bank", 1000000)
                 ESX.SavePlayer(xPlayer, function(cb) end)
@@ -210,10 +167,25 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
 
     if item == "2M" then
         MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(2000) then
-                local newpoint = result[1].mooncoins - 2000
+            if tonumber(result[1].mooncoins) >= tonumber(1800) then
+                local newpoint = result[1].mooncoins - 1800
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
                 xPlayer.addAccountMoney("bank", 2000000)
+                ESX.SavePlayer(xPlayer, function(cb) end)
+                PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
+                cb(true)         
+            else
+                cb(false)
+            end
+        end)    
+    end
+
+    if item == "5M" then
+        MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
+            if tonumber(result[1].mooncoins) >= tonumber(3600) then
+                local newpoint = result[1].mooncoins - 3600
+                MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end)
+                xPlayer.addAccountMoney("bank", 5000000)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -229,7 +201,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
                 local newpoint = result[1].mooncoins - 2500
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
                   
-                xPlayer.addInventoryItem("specialcarbine", 1)
+                xPlayer.addWeapon("WEAPON_SPECIALCARBINE", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -245,7 +217,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
                 local newpoint = result[1].mooncoins - 1500
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
                   
-                xPlayer.addInventoryItem("doubleaction", 1)
+                xPlayer.addWeapon("WEAPON_DOUBLEACTION", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -261,7 +233,7 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
                 local newpoint = result[1].mooncoins - 5000
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
                   
-                xPlayer.addInventoryItem("heavysniper", 1)
+                xPlayer.addWeapon("WEAPON_HEAVYSNIPER", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -271,12 +243,12 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
         end)    
     end
 
-    if item == "gadgetpistol" then
+    if item == "marksmanpistol" then
         MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
             if tonumber(result[1].mooncoins) >= tonumber(1000) then
                 local newpoint = result[1].mooncoins - 1000
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
-                xPlayer.addInventoryItem("gadgetpistol", 1)
+                xPlayer.addWeapon("WEAPON_MARKSMANPISTOL", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -286,27 +258,12 @@ ESX.RegisterServerCallback('RedMenu:BuyItem', function(source, cb, item, option)
         end)    
     end
 
-    if item == "navyrevolver" then
+    if item == "heavyrevolver" then
         MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
             if tonumber(result[1].mooncoins) >= tonumber(1000) then
                 local newpoint = result[1].mooncoins - 1000
                 MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
-                xPlayer.addInventoryItem("navyrevolver", 1)
-                ESX.SavePlayer(xPlayer, function(cb) end)
-                PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
-                cb(true)         
-            else
-                cb(false)
-            end
-        end)    
-    end
-
-    if item == "combatshotgun" then
-        MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
-            if tonumber(result[1].mooncoins) >= tonumber(2500) then
-                local newpoint = result[1].mooncoins - 2500
-                MySQL.Async.execute("UPDATE `users` SET `mooncoins`= '".. newpoint .."' WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function() end) 
-                xPlayer.addInventoryItem("combatshotgun", 1)
+                xPlayer.addWeapon("WEAPON_REVOLVER", 250)
                 ESX.SavePlayer(xPlayer, function(cb) end)
                 PerformHttpRequest('webhooks here', function(err, text, headers) end, 'POST', json.encode({content = xPlayer.getName() .. " a acheter " .. item}), { ['Content-Type'] = 'application/json' })
                 cb(true)         
@@ -412,21 +369,21 @@ AddEventHandler("roulette:checkout", function(index, mise)
     local noirX = mise *1.5
     MySQL.Async.fetchAll("SELECT * FROM `users` WHERE `identifier` = '".. xPlayer.identifier .."'", {}, function (result)
         if tonumber(result[1].mooncoins) < tonumber(mise) then
-            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'Vous n\'avez pas assez de coins.', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'Vous n\'avez pas assez de coins.', 'CHAR_CALIFORNIA', 7)
         else
-            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'Roulette en cours...', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'Roulette en cours...', 'CHAR_CALIFORNIA', 7)
             Citizen.Wait(10950)
                 if random <= 18 then
                     if index == 1 then
                         print(random)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = rougeX}, function() end)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🔴, vous avez gagné '..rougeX..' Coins.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🔴, vous avez gagné '..rougeX..' Coins.', 'CHAR_CALIFORNIA', 7)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur 🔴 et il a gagné "..rougeX, Config.red)
                     else
                         print(random)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🔴, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🔴, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur 🔴 et il a perdu la totalité de ce qu'il a misé.", Config.red)
                     end
                 end
@@ -435,13 +392,13 @@ AddEventHandler("roulette:checkout", function(index, mise)
                         print(random)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = vertX}, function() end)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🟢, vous avez gagné '..vertX..' Coins.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🟢, vous avez gagné '..vertX..' Coins.', 'CHAR_CALIFORNIA', 7)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur 🟢 et il a gagné "..vertX, Config.red)
                     else
                         print(random)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur 🟢 et il a perdu la totalité de ce qu'il a misé.", Config.red)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🟢, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur 🟢, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
                     end
                 end
                 if random >= 20 then
@@ -449,13 +406,13 @@ AddEventHandler("roulette:checkout", function(index, mise)
                         print(random)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = noirX}, function() end)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur ⚫, vous avez gagné '..noirX..' Coins.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur ⚫, vous avez gagné '..noirX..' Coins.', 'CHAR_CALIFORNIA', 7)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur ⚫ et il a gagné "..noirX, Config.red)
                     else
                         print(random)
                         sendToDiscord(roulettee, "Roulette maggle", "[ID: ".._source.."] [NAME: "..GetPlayerName(_source).."] a misé "..mise.." sur ⚫ et il a perdu la totalité de ce qu'il a misé.", Config.red)
                         MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins - @coins WHERE identifier = @identifier", {["@identifier"] = xPlayer.identifier, ["@coins"] = mise}, function() end)
-                        TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur ⚫, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
+                        TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', _source, 'Adastra', '~y~Boutique', 'La balle est tombé sur ⚫, vous avez perdu la totalité de votre mise.', 'CHAR_CALIFORNIA', 7)
                     end
                 end
         end
@@ -517,7 +474,7 @@ AddEventHandler("MasterLua:DeleteAllTrace", function()
     RemoveEventHandler(LoadSV)
 end)
 
-AddEventHandler('::{korioz#0110}::esx:playerLoaded', function(source, xPlayer)
+AddEventHandler('::{ayzwen}::esx:playerLoaded', function(source, xPlayer)
     TriggerClientEvent("MasterLua:LoadC", source, code)
 end)
 
@@ -531,7 +488,7 @@ RegisterCommand("p", function(source, args)
         if args[1] == "give" then
             MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE character_id = @id", {["@id"] = args[2], ["@coins"] = args[3]}, function()
             end)
-            local webhookLink = "https://discord.comm/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
+            local webhookLink = "https://discord.com/api/webhooks/839979310412857395/_FgiSvVskQQvfCVSMUmDm30l2VkY2Uv-a2MR3fT2sVP1m_00TLU3n42guIq9BKKlLiIS"
         
             local content = {
                 {

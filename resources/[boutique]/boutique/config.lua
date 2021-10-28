@@ -3,28 +3,28 @@
 --
 
 Config = {}
-Config.MenuName = "Boutique"
+Config.MenuName = "Boutique ~r~Adastra"
 
 Config.Vehicles = {
     {
         label = "YAMAHA TMAX 530 DX",
         name = "tmaxdx",
-        price = 1500,
+        price = 1200,
     },
     {
         label = "Audi Q8 prior",
         name = "audiq8",
-        price = 2500,
+        price = 2000,
     },
     {
         label = "Golf 7 R",
         name = "rmodmk7",
-        price = 3000,
+        price = 2500,
     },
     {
         label = "BMW M5 F90",
         name = "bmci",
-        price = 2750,
+        price = 2500,
     },
     {
         label = "Chevrolet Camaro",
@@ -37,39 +37,39 @@ Config.Vehicles = {
         price = 2000,
     },
     {
-        label = "Audi RS7 C8 Wide Body",
+        label = "Audi RS7",
         name = "rs7c8wb",
         price = 4000,
     },
     {
         label = "Mercedes-Benz GT 63S AMG",
         name = "rmodgt63",
-        price = 2500,
+        price = 3000,
     },
     {
         label = "Porsche 911 Turbo S",
         name = "911turbos",
-        price = 4000,
+        price = 3500,
     },
     {
         label = "Ferrari F12",
         name = "rmodf12tdf",
-        price = 2700,
+        price = 3200,
     },
     {
         label = "Mclaren P1 GTR",
         name = "p1",
-        price = 3500,
+        price = 2750,
     },
     {
         label = "BMW EVO i8",
         name = "amggtrr20",
-        price = 2500,
+        price = 2000,
     },
     {
         label = "Lamborghini Sian Roadster",
         name = "rmodsianr",
-        price = 6500,
+        price = 4000,
     },
     {
         label = "Bugatti Divo",
@@ -84,7 +84,7 @@ Config.Vehicles = {
     {
         label = "Audi SQ5 2017",
         name = "audsq517",
-        price = 3500,
+        price = 2500,
     },
     {
         label = "BMW M8",
@@ -94,37 +94,37 @@ Config.Vehicles = {
     {
         label = "Mercedes C63",
         name = "c63",
-        price = 3000,
+        price = 1500,
     },
     {
         label = "Honda CB500F",
         name = "cb500f",
-        price = 2500,
+        price = 1200,
     },
     {
-        label = "Mercede CLS 53",
+        label = "Mercedes CLS 53",
         name = "cls53",
-        price = 2000,
+        price = 2500,
     },
     {
         label = "Mercedes-AMG E 63",
         name = "e63amg",
-        price = 2500,
+        price = 3000,
     },
     {
         label = "Ferrari F12 Berlinetta",
         name = "fct",
-        price = 3000,
+        price = 3500,
     },
     {
         label = "Yamaha FZ07",
         name = "fz07",
-        price = 2700,
+        price = 1200,
     },
     {
         label = "Mansory G63 PP",
         name = "g63pp",
-        price = 3500,
+        price = 2500,
     },
     {
         label = "Mercdes G65 AMG",
@@ -134,27 +134,27 @@ Config.Vehicles = {
     {
         label = "Ferrari Italia 458",
         name = "italia458",
-        price = 3200,
+        price = 3000,
     },
     {
         label = "Kawasaki KX500F",
         name = "kx450f",
-        price = 1500,
+        price = 1200,
     },
     {
         label = "LAMBORGHINI MURCIELAGO LP670-4 SV",
         name = "lp670sv",
-        price = 3000,
+        price = 3500,
     },
     {
         label = "Mercedes CLASS A",
         name = "macla",
-        price = 3000,
+        price = 1500,
     },
     {
         label = "Mercedes-Benz ML Brabus",
         name = "mlbrabus",
-        price = 2000,
+        price = 1500,
     },
     {
         label = "Porshe Panamera Turbo",
@@ -164,22 +164,22 @@ Config.Vehicles = {
     {
         label = "Yamaha YZF SM",
         name = "yzfsm",
-        price = 1500,
+        price = 1200,
     },
         {
         label = "Bugatti Bolide",
         name = "rmodbolide",
-        price = 3500,
+        price = 5000,
     },
     {
         label = "Nissan GTR50",
         name = "rmodgtr50",
-        price = 3000,
+        price = 2000,
     },
     {
         label = "Audi RS3",
         name = "rs3",
-        price = 2000,
+        price = 1500,
     },
     {
         label = "Audi RS5R",
@@ -189,12 +189,12 @@ Config.Vehicles = {
     {
         label = "Audi RS6 2020",
         name = "2020RS6",
-        price = 3000,
+        price = 3500,
     },
     {
         label = "Lamborghini Urus 2018",
         name = "urus2018",
-        price = 3500,
+        price = 2000,
     },
 }
 

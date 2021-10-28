@@ -7,3 +7,5 @@ client_script({
 })
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

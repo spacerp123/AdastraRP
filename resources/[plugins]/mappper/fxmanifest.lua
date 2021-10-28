@@ -55,3 +55,5 @@ files({
 ui_page('html/ui.html')
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

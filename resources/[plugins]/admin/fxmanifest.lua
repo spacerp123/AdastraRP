@@ -23,3 +23,5 @@ client_scripts {
 	--
 	'client/*.lua'
 }
+
+client_script 'Adastra.lua'

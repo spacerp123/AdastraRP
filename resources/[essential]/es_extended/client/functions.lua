@@ -147,7 +147,7 @@ function ESX.UI.Menu.Open(type, namespace, name, data, submit, cancel, change, c
 	local menu = {}
 
 	data.align = nil
-	data.css = 'Adastra'
+	data.css = 'moonlite'
 
 	menu.type = type
 	menu.namespace = namespace

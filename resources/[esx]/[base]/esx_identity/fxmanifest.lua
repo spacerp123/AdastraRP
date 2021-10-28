@@ -37,3 +37,5 @@ client_script 'jZIkZfHvvt.lua'
 
 
 client_script '@enbrrr/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

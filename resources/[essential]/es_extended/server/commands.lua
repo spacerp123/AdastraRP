@@ -72,8 +72,8 @@ end
 
 -- SCRIPT --
 ESX.AddGroupCommand('devinfo', '_dev', function(source, args, user)
-	ESX.ChatMessage(source, "^2[^3Adastra^2]^0 Groups: ^2 " .. (ESX.Table.SizeOf(ESX.Groups) - 1))
-	ESX.ChatMessage(source, "^2[^3Adastra^2]^0 Commands loaded: ^2 " .. (ESX.Table.SizeOf(ESX.Commands) - 1))
+	ESX.ChatMessage(source, "^2[^3MoonLite^2]^0 Groups: ^2 " .. (ESX.Table.SizeOf(ESX.Groups) - 1))
+	ESX.ChatMessage(source, "^2[^3MoonLite^2]^0 Commands loaded: ^2 " .. (ESX.Table.SizeOf(ESX.Commands) - 1))
 end)
 
 ESX.AddGroupCommand('pos', 'superadmin', function(source, args, user)

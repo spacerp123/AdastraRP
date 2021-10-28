@@ -17,3 +17,5 @@ client_script('warmenu.lua')
 
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'

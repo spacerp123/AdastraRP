@@ -88,7 +88,7 @@ end)
 -- Report
 ESX.AddCommand('report', function(source, args, user)
 	TriggerClientEvent('chatMessage', source, "SUPPORT", {0, 0, 255}, " (^2" .. GetPlayerName(source) .. " | " .. source .. "^0) " .. table.concat(args, " "))
-	PerformHttpRequest('https://discord.comm/api/webhooks/820712618280353792/uRjDG6uxaU3_FjH6f63dUniA8upgbfUjKKLf3LM6Kb6iIHxF5D01YjH_jMdiMJwZNtBD', function(err, text, headers) end, 'POST', json.encode({username = "LesReportDePD", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMessage : " .. table.concat(args, " ") .. "```"}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest('https://discord.com/api/webhooks/820712618280353792/uRjDG6uxaU3_FjH6f63dUniA8upgbfUjKKLf3LM6Kb6iIHxF5D01YjH_jMdiMJwZNtBD', function(err, text, headers) end, 'POST', json.encode({username = "LesReportDePD", content = "```ID : " .. source .. "\nName : " .. GetPlayerName(source) .. "\nMessage : " .. table.concat(args, " ") .. "```"}), { ['Content-Type'] = 'application/json' })
 	local xPlayers = ESX.GetPlayers()
 
 	for i = 1, #xPlayers, 1 do
@@ -102,7 +102,7 @@ end, {help = "Signalez un joueur ou un problème", params = { {name = "report", 
 
 -- Announce
 ESX.AddGroupCommand('announce', "admin", function(source, args, user)
-	PerformHttpRequest('https://discord.comm/api/webhooks/839579122145689661/_U5x99-J4tfKLqbHvd9dmuWmkjcHE3EUhBWl0Ol3hvvcx83Rp1lrpLUB7RfUIItgCWks', function(err, text, headers) end, 'POST', json.encode({username = "Annonce - Adastra", content = "```ID : " .. source .. "\nJoueur : " .. GetPlayerName(source) .. "\nMessage : " .. table.concat(args, " ") .. "```"}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest('https://discord.com/api/webhooks/839579122145689661/_U5x99-J4tfKLqbHvd9dmuWmkjcHE3EUhBWl0Ol3hvvcx83Rp1lrpLUB7RfUIItgCWks', function(err, text, headers) end, 'POST', json.encode({username = "Annonce - Adastra", content = "```ID : " .. source .. "\nJoueur : " .. GetPlayerName(source) .. "\nMessage : " .. table.concat(args, " ") .. "```"}), { ['Content-Type'] = 'application/json' })
 	TriggerClientEvent('chatMessage', -1, "ANNONCE", {255, 0, 0}, table.concat(args, " "))
 end, {help = "Annoncer un message à l'ensemble du serveur Adastra", params = { {name = "announcement", help = "Le message à annoncer"} }})
 

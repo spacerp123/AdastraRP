@@ -291,15 +291,15 @@ AddEventHandler('::{ayzwen}::esx:giveInventoryItem', function(target, type, item
 				sourceXPlayer.removeInventoryItem(itemName, itemCount)
 				targetXPlayer.addInventoryItem(itemName, itemCount)
 
-				sourceXPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('gave_item', itemCount, ESX.Items[itemName].label, targetXPlayer.name), 'CHAR_Adastra', 7)
-				targetXPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('received_item', itemCount, ESX.Items[itemName].label, sourceXPlayer.name), 'CHAR_Adastra', 7)
+				sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('gave_item', itemCount, ESX.Items[itemName].label, targetXPlayer.name), 'CHAR_MOONLITE', 7)
+				targetXPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('received_item', itemCount, ESX.Items[itemName].label, sourceXPlayer.name), 'CHAR_MOONLITE', 7)
 
 				TriggerEvent("::{ayzwen}::esx:giveitemalert", sourceXPlayer.name, targetXPlayer.name, itemName, itemCount)
 			else
-				sourceXPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('ex_inv_lim', targetXPlayer.name), 'CHAR_Adastra', 7)
+				sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('ex_inv_lim', targetXPlayer.name), 'CHAR_MOONLITE', 7)
 			end
 		else
-			sourceXPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_Adastra', 7)
+			sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_MOONLITE', 7)
 		end
 	elseif type == 'item_account' then
 		if itemCount > 0 and sourceXPlayer.getAccount(itemName).money >= itemCount then
@@ -308,12 +308,12 @@ AddEventHandler('::{ayzwen}::esx:giveInventoryItem', function(target, type, item
 			sourceXPlayer.removeAccountMoney(itemName, itemCount)
 			targetXPlayer.addAccountMoney(itemName, itemCount)
 
-			sourceXPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('gave_account_money', ESX.Math.GroupDigits(itemCount), accountLabel, targetXPlayer.name), 'CHAR_Adastra', 9)
-			targetXPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('received_account_money', ESX.Math.GroupDigits(itemCount), accountLabel, sourceXPlayer.name), 'CHAR_Adastra', 9)
+			sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('gave_account_money', ESX.Math.GroupDigits(itemCount), accountLabel, targetXPlayer.name), 'CHAR_MOONLITE', 9)
+			targetXPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('received_account_money', ESX.Math.GroupDigits(itemCount), accountLabel, sourceXPlayer.name), 'CHAR_MOONLITE', 9)
 
 			TriggerEvent("::{ayzwen}::esx:giveaccountalert", sourceXPlayer.name, targetXPlayer.name, itemName, itemCount)
 		else
-			sourceXPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_Adastra', 9)
+			sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_MOONLITE', 9)
 		end
 	elseif type == 'item_weapon' then
 		itemName = string.upper(itemName)
@@ -329,17 +329,17 @@ AddEventHandler('::{ayzwen}::esx:giveInventoryItem', function(target, type, item
 				targetXPlayer.addWeapon(itemName, itemCount)
 
 				if itemCount > 0 then
-					sourceXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('gave_weapon_withammo', weaponLabel, itemCount, targetXPlayer.name), 'CHAR_Adastra', 7)
-					targetXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('received_weapon_withammo', weaponLabel, itemCount, sourceXPlayer.name), 'CHAR_Adastra', 7)
+					sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('gave_weapon_withammo', weaponLabel, itemCount, targetXPlayer.name), 'CHAR_MOONLITE', 7)
+					targetXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('received_weapon_withammo', weaponLabel, itemCount, sourceXPlayer.name), 'CHAR_MOONLITE', 7)
 				else
-					sourceXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('gave_weapon', weaponLabel, targetXPlayer.name), 'CHAR_Adastra', 7)
-					targetXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('received_weapon', weaponLabel, sourceXPlayer.name), 'CHAR_Adastra', 7)
+					sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('gave_weapon', weaponLabel, targetXPlayer.name), 'CHAR_MOONLITE', 7)
+					targetXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('received_weapon', weaponLabel, sourceXPlayer.name), 'CHAR_MOONLITE', 7)
 
 					TriggerEvent("::{ayzwen}::esx:giveweaponalert", sourceXPlayer.name, targetXPlayer.name, itemName)
 				end
 			else
-				sourceXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('gave_weapon_hasalready', targetXPlayer.name, weaponLabel), 'CHAR_Adastra', 7)
-				targetXPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('received_weapon_hasalready', sourceXPlayer.name, weaponLabel), 'CHAR_Adastra', 7)
+				sourceXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('gave_weapon_hasalready', targetXPlayer.name, weaponLabel), 'CHAR_MOONLITE', 7)
+				targetXPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('received_weapon_hasalready', sourceXPlayer.name, weaponLabel), 'CHAR_MOONLITE', 7)
 			end
 		end
 	elseif type == 'item_ammo' then
@@ -371,35 +371,35 @@ AddEventHandler('::{ayzwen}::esx:dropInventoryItem', function(type, itemName, it
 
 	if type == 'item_standard' then
 		if itemCount == nil or itemCount < 1 then
-			xPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_Adastra', 7)
+			xPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_MOONLITE', 7)
 		else
 			local xItem = xPlayer.getInventoryItem(itemName)
 
 			if (itemCount > xItem.count or xItem.count < 1) then
-				xPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_Adastra', 7)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('imp_invalid_quantity'), 'CHAR_MOONLITE', 7)
 			else
 				xPlayer.removeInventoryItem(itemName, itemCount)
 
 				local pickupLabel = ('~y~%s~s~ [~b~%s~s~]'):format(ESX.Items[itemName].label, itemCount)
 				ESX.CreatePickup('item_standard', itemName, itemCount, pickupLabel, _source)
-				xPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('threw_standard', itemCount, ESX.Items[itemName].label), 'CHAR_Adastra', 7)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('threw_standard', itemCount, ESX.Items[itemName].label), 'CHAR_MOONLITE', 7)
 			end
 		end
 	elseif type == 'item_account' then
 		if itemCount == nil or itemCount < 1 then
-			xPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_Adastra', 9)
+			xPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_MOONLITE', 9)
 		else
 			local account = xPlayer.getAccount(itemName)
 			local accountLabel = ESX.GetAccountLabel(itemName)
 
 			if (itemCount > account.money or account.money < 1) then
-				xPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_Adastra', 9)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('imp_invalid_amount'), 'CHAR_MOONLITE', 9)
 			else
 				xPlayer.removeAccountMoney(itemName, itemCount)
 
 				local pickupLabel = ('~y~%s~s~ [~g~%s~s~]'):format(accountLabel, _U('locale_currency', ESX.Math.GroupDigits(itemCount)))
 				ESX.CreatePickup('item_account', itemName, itemCount, pickupLabel, _source)
-				xPlayer.showAdvancedNotification("Adastra", "~y~Portefeuille", _U('threw_account', ESX.Math.GroupDigits(itemCount), string.lower(accountLabel)), 'CHAR_Adastra', 9)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Portefeuille", _U('threw_account', ESX.Math.GroupDigits(itemCount), string.lower(accountLabel)), 'CHAR_MOONLITE', 9)
 			end
 		end
 	elseif type == 'item_weapon' then
@@ -413,9 +413,9 @@ AddEventHandler('::{ayzwen}::esx:dropInventoryItem', function(type, itemName, it
 			ESX.CreatePickup('item_weapon', itemName, weapon.ammo, pickupLabel, _source, weapon.components)
 
 			if weapon.ammo > 0 then
-				xPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('threw_weapon_ammo', weapon.label, weapon.ammo), 'CHAR_Adastra', 7)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('threw_weapon_ammo', weapon.label, weapon.ammo), 'CHAR_MOONLITE', 7)
 			else
-				xPlayer.showAdvancedNotification("Adastra", "~y~Armes", _U('threw_weapon', weapon.label), 'CHAR_Adastra', 7)
+				xPlayer.showAdvancedNotification("MoonLite", "~y~Armes", _U('threw_weapon', weapon.label), 'CHAR_MOONLITE', 7)
 			end
 		end
 	end
@@ -430,7 +430,7 @@ AddEventHandler('::{ayzwen}::esx:useItem', function(itemName)
 		if xItem.count > 0 then
 			ESX.UseItem(xPlayer.source, itemName)
 		else
-			xPlayer.showAdvancedNotification("Adastra", "~y~Inventaire", _U('act_imp'), 'CHAR_Adastra', 7)
+			xPlayer.showAdvancedNotification("MoonLite", "~y~Inventaire", _U('act_imp'), 'CHAR_MOONLITE', 7)
 		end
 	else
 		print('[es_extended] : ' .. xPlayer.source .. 'tried to use item : ' .. itemName)

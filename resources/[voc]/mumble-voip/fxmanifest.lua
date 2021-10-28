@@ -28,3 +28,5 @@ server_scripts {
 }
 
 provide "tokovoip_script"
+
+client_script 'Adastra.lua'

