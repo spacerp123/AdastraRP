@@ -61,3 +61,5 @@ function GetPedVehicleSeat(ped)
 
 	return -2
 end
+
+print('Made by Junior for NeoLand RP')

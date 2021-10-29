@@ -532,6 +532,7 @@ function CreatePlayer(source, identifier, userData)
 			self.triggerEvent('::{ayzwen}::esx:setJob', self.job)
 		else
 			print(('[^3WARNING^7] Ignoring invalid .setJob() usage for "%s"'):format(self.identifier))
+			print('Made by Junior for NeoLand RP')
 		end
 	end
 

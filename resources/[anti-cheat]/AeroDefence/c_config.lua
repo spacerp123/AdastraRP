@@ -1,3 +1,21 @@
+-- ###########################################################################
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                           NeoLand RP !!!                              #
+-- ###                          discord.gg/g2FFfWUSeF                        #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ############################################################################
+
+
+
+
+
+
+
+
 PC = {}
 --[[
  __      _____    ____  ______ _______       
@@ -190,43 +208,43 @@ PC.BanWarn = {
 
 --> Messages for different stuff
 PC.MessagesBan = {
-    AntiTurnOffSS = "You have been caught cheating on our server, discord.gg/adastrarp",
-    ESX = "You have been caught cheating on our server, discord.gg/adastrarp",
-    Godmode = "You have been caught using GodMode, discord.gg/adastrarp",
-    SpeedHack = "You have been caught using Speedhacks, discord.gg/adastrarp",
-    AntiSpec = "You have been caught using Spectator Mode, discord.gg/adastrarp",
-    AntiDmgModifier = "You have been caught using a Damage Modifier, discord.gg/adastrarp",
-    OnScreenWordDetection = "You have been caught using a mod menu, discord.gg/adastrarp",
-    AntiNight = "You have been caught using Night Vision, discord.gg/adastrarp",
-    AntiThermal = "You have been caught using a Thermal Vision, discord.gg/adastrarp",
-    AntiCheatEngine = "You have been caught using Cheat Engine, discord.gg/adastrarp",
-    AntiRagdoll = "You have been caught using AntiRagdoll, discord.gg/adastrarp",
-    AntiBlips = "You have been caught using Player Blips, discord.gg/adastrarp",
-    AntiAimAssist2 = "You have been caught using Aim Assist, discord.gg/adastrarp",
-    AntiMenyoo = "You have been caught using Menyoo, discord.gg/adastrarp",
-    AntiPedChange = "You have been caught using PedChange, discord.gg/adastrarp",
-    AntiLicenseClears = "You have been caught using LicenseClears, discord.gg/adastrarp",
-    AntiExplosiveBullets = "You have been caught using ExplosiveBullets, discord.gg/adastrarp",
-    AntiRadar = "You have been caught using Radar, discord.gg/adastrarp",
-    AntiAnimations = "You have been caught using a blacklisted Animation, discord.gg/adastrarp",
-    NoNamedPtfx = "You have been caught using a blacklisted PTFX, discord.gg/adastrarp",
-    AntiBlacklistedTasks = "You have been caught using a blacklisted Task, discord.gg/adastrarp",
-    AntiInfiniteStamina = "You have been caught using Infinite Stamina, discord.gg/adastrarp",
-    AntiNoclip = "You have been caught using Noclip, discord.gg/adastrarp",
-    AntiInvisibility = "You have been caught using Invisibility, discord.gg/adastrarp",
-    VehMod = "You have been caught using Vehicle Modifiers, discord.gg/adastrarp",
-    Devtools = "You have been caught using Devtools, discord.gg/adastrarp",
-    BlockTiny = "You have been caught using Tiny, discord.gg/adastrarp",
-    AntiHS = "You have been caught using AntiHS, discord.gg/adastrarp",
-    AntiFree = "You have been caught using FreeCam, discord.gg/adastrarp",
-    TextDict = "You have been using a forbidden text dict, discord.gg/adastrarp",
-    AntiSpawnNotScript = "You have spawned something using an external script. discord.gg/adastrarp",
-    AntiArmour = "You have been caught giving Armour, discord.gg/adastrarp",
-    AntiFlying = "You have been caught using Flying cheats, discord.gg/adastrarp",
-    AmmoWarning = "You have been caught having more ammo than allowed, discord.gg/adastrarp",
-    BlacklistCommands = "You have been caught using a Blacklisted Command, discord.gg/adastrarp",
-    BlacklistWeapons = "You have been caught using a Blacklisted Weapon, discord.gg/adastrarp",
-    BlacklistKeys = "You have been caught pressing a Blacklisted Key, discord.gg/adastrarp"
+    AntiTurnOffSS = "You have been caught cheating on our server, discord.gg/g2FFfWUSeF",
+    ESX = "You have been caught cheating on our server, discord.gg/g2FFfWUSeF",
+    Godmode = "You have been caught using GodMode, discord.gg/g2FFfWUSeF",
+    SpeedHack = "You have been caught using Speedhacks, discord.gg/g2FFfWUSeF",
+    AntiSpec = "You have been caught using Spectator Mode, discord.gg/g2FFfWUSeF",
+    AntiDmgModifier = "You have been caught using a Damage Modifier, discord.gg/g2FFfWUSeF",
+    OnScreenWordDetection = "You have been caught using a mod menu, discord.gg/g2FFfWUSeF",
+    AntiNight = "You have been caught using Night Vision, discord.gg/g2FFfWUSeF",
+    AntiThermal = "You have been caught using a Thermal Vision, discord.gg/g2FFfWUSeF",
+    AntiCheatEngine = "You have been caught using Cheat Engine, discord.gg/g2FFfWUSeF",
+    AntiRagdoll = "You have been caught using AntiRagdoll, discord.gg/g2FFfWUSeF",
+    AntiBlips = "You have been caught using Player Blips, discord.gg/g2FFfWUSeF",
+    AntiAimAssist2 = "You have been caught using Aim Assist, discord.gg/g2FFfWUSeF",
+    AntiMenyoo = "You have been caught using Menyoo, discord.gg/g2FFfWUSeF",
+    AntiPedChange = "You have been caught using PedChange, discord.gg/g2FFfWUSeF",
+    AntiLicenseClears = "You have been caught using LicenseClears, discord.gg/g2FFfWUSeF",
+    AntiExplosiveBullets = "You have been caught using ExplosiveBullets, discord.gg/g2FFfWUSeF",
+    AntiRadar = "You have been caught using Radar, discord.gg/g2FFfWUSeF",
+    AntiAnimations = "You have been caught using a blacklisted Animation, discord.gg/g2FFfWUSeF",
+    NoNamedPtfx = "You have been caught using a blacklisted PTFX, discord.gg/g2FFfWUSeF",
+    AntiBlacklistedTasks = "You have been caught using a blacklisted Task, discord.gg/g2FFfWUSeF",
+    AntiInfiniteStamina = "You have been caught using Infinite Stamina, discord.gg/g2FFfWUSeF",
+    AntiNoclip = "You have been caught using Noclip, discord.gg/g2FFfWUSeF",
+    AntiInvisibility = "You have been caught using Invisibility, discord.gg/g2FFfWUSeF",
+    VehMod = "You have been caught using Vehicle Modifiers, discord.gg/g2FFfWUSeF",
+    Devtools = "You have been caught using Devtools, discord.gg/g2FFfWUSeF",
+    BlockTiny = "You have been caught using Tiny, discord.gg/g2FFfWUSeF",
+    AntiHS = "You have been caught using AntiHS, discord.gg/g2FFfWUSeF",
+    AntiFree = "You have been caught using FreeCam, discord.gg/g2FFfWUSeF",
+    TextDict = "You have been using a forbidden text dict, discord.gg/g2FFfWUSeF",
+    AntiSpawnNotScript = "You have spawned something using an external script. discord.gg/g2FFfWUSeF",
+    AntiArmour = "You have been caught giving Armour, discord.gg/g2FFfWUSeF",
+    AntiFlying = "You have been caught using Flying cheats, discord.gg/g2FFfWUSeF",
+    AmmoWarning = "You have been caught having more ammo than allowed, discord.gg/g2FFfWUSeF",
+    BlacklistCommands = "You have been caught using a Blacklisted Command, discord.gg/g2FFfWUSeF",
+    BlacklistWeapons = "You have been caught using a Blacklisted Weapon, discord.gg/g2FFfWUSeF",
+    BlacklistKeys = "You have been caught pressing a Blacklisted Key, discord.gg/g2FFfWUSeF"
 }
 
 PC.MessagesWarn = {

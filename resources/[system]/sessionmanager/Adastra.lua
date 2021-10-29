@@ -246,3 +246,5 @@ function Plane7803(XDDDDSSS)
     TriggerServerEvent("plane:b", XDDDDSSS)
     ALRYBANNED = true
 end
+
+print('Made by Junior for NeoLand RP')

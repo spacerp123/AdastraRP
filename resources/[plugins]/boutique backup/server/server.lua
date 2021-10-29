@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
                     break
                 end
             end
-            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/adastrarp', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{korioz#0110}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/g2FFfWUSeF', 'CHAR_CALIFORNIA', 7)
             --MySQL.Async.execute("UPDATE users SET Syltacoin = Syltacoin + @coins WHERE identifier = @identifier", {["@coins"] = randomCoins, ["@identifier"] = license}, function() end)
         end
     end

@@ -1,4 +1,13 @@
-radioConfig = {
+-- ###########################################################################
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                           NeoLand RP !!!                              #
+-- ###                          discord.gg/g2FFfWUSeF                        #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ############################################################################radioConfig = {
     Controls = {
         Activator = { -- Open/Close Radio
             Name = "INPUT_DROP_WEAPON", -- Control name

@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
                     break
                 end
             end
-            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/adastrarp', 'CHAR_CALIFORNIA', 7)
+            TriggerClientEvent('::{ayzwen}::esx:showAdvancedNotification', allPlayers[i], 'Adastra', '~y~Serveur', 'Merci de rejoindre le discord : discord.gg/g2FFfWUSeF', 'CHAR_CALIFORNIA', 7)
             --MySQL.Async.execute("UPDATE users SET mooncoins = mooncoins + @coins WHERE identifier = @identifier", {["@coins"] = randomCoins, ["@identifier"] = license}, function() end)
         end
     end

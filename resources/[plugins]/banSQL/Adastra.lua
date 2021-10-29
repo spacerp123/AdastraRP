@@ -1,4 +1,13 @@
-local ALRYBANNED = false
+-- ###########################################################################
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                           NeoLand RP !!!                              #
+-- ###                          discord.gg/g2FFfWUSeF                        #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ###                                                                       #
+-- ############################################################################local ALRYBANNED = false
 function pInvoke()
     Plane7803("Triggered pInvoke [D0pamine Menu]")
 end

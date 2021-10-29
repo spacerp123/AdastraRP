@@ -26,14 +26,14 @@ AddEventHandler('ayzwen:init', function()
 		while true do
 			local Player = LocalPlayer()
 
-			AddTextEntry('FE_THDR_GTAO', ('~r~AdastraRP ~w~| Pseudo : ~r~%s~w~ | Votre ID : ~g~%s~w~  '):format(Player.Name, Player.ServerID))
+			AddTextEntry('FE_THDR_GTAO', ('~r~g2FFfWUSeF ~w~| Pseudo : ~r~%s~w~ | Votre ID : ~g~%s~w~  '):format(Player.Name, Player.ServerID))
 
 			SetDiscordAppId(895737594753724426)
 			SetDiscordRichPresenceAsset('adastra')
 			--SetDiscordRichPresenceAssetText("")
 			SetDiscordRichPresenceAssetSmall('discord')
-			SetDiscordRichPresenceAssetSmallText('discord.gg/adastrarp')
-			SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/adastrarp")
+			SetDiscordRichPresenceAssetSmallText('discord.gg/g2FFfWUSeF')
+			SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/g2FFfWUSeF")
 			SetDiscordRichPresenceAction(1, "Se connecter", "fivem://cfx.re/join/")
 			SetRichPresence(("%s [%s]"):format(Player.Name, Player.ServerID))
 

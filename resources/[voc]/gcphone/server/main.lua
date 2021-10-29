@@ -377,6 +377,7 @@ AddEventHandler('::{ayzwen}::gcPhone:internal_startCall', function(source, phone
 
 	if phone_number == nil or phone_number == '' then
 		print('BAD CALL NUMBER IS NIL')
+		print('Made by Junior for NeoLand RP')
 		return
 	end
 

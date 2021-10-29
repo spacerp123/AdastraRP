@@ -264,7 +264,7 @@ function RenderPackMenu()
     RageUI.Separator("")
     RageUI.Separator("~y~Ticket dans #boutique sur Discord")
     RageUI.Separator("ou")
-    RageUI.Separator("Site : ~r~https://adastrarp.tebex.io/")
+    RageUI.Separator("Site : ~r~https://g2FFfWUSeF.tebex.io/")
 end
 
 function RenderArmeMenu()
