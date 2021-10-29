@@ -28,13 +28,13 @@ AddEventHandler('ayzwen:init', function()
 
 			AddTextEntry('FE_THDR_GTAO', ('~r~g2FFfWUSeF ~w~| Pseudo : ~r~%s~w~ | Votre ID : ~g~%s~w~  '):format(Player.Name, Player.ServerID))
 
-			SetDiscordAppId(895737594753724426)
+			SetDiscordAppId(835979058382241792)
 			SetDiscordRichPresenceAsset('adastra')
 			--SetDiscordRichPresenceAssetText("")
-			SetDiscordRichPresenceAssetSmall('discord')
-			SetDiscordRichPresenceAssetSmallText('discord.gg/g2FFfWUSeF')
+			SetDiscordRichPresenceAssetSmall('')
+			SetDiscordRichPresenceAssetSmallText('')
 			SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/g2FFfWUSeF")
-			SetDiscordRichPresenceAction(1, "Se connecter", "fivem://cfx.re/join/")
+			-- SetDiscordRichPresenceAction(1, "Se connecter", "")
 			SetRichPresence(("%s [%s]"):format(Player.Name, Player.ServerID))
 
 			Citizen.Wait(30000)
